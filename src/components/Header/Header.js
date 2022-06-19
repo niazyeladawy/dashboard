@@ -1,0 +1,61 @@
+import React from 'react'
+import logo from '../../assets/images/Untitled-3.jpg';
+import profileImg from '../../assets/images/pp.jpg';
+import './header.css'
+import { NavLink, useNavigate } from 'react-router-dom';
+const Header = () => {
+    let navigate = useNavigate();
+
+    function logOut() {
+        localStorage.removeItem("userToken");
+        navigate('/login')
+
+    }
+    return (
+        <div className="header">
+            <div className='header__content d-flex justify-content-between align-items-center'>
+                <div>
+                    <img src={logo} alt="" />
+                </div>
+                <div className='right__header d-flex bg-main align-items-center py-2 px-4' >
+                    <div className='position-relative cursr' >
+                        <div id="notificationdropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell fa-2x text-white mx-2" ></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-special">
+                                5
+                            </span>
+                        </div>
+
+                        <ul className="dropdown-menu p-3 profile__menu" aria-labelledby="notificationdropdownMenu">
+                            <li >
+                                profile pic changed
+                            </li>
+                        </ul>
+                    </div>
+                    <div className='position-relative'>
+                        <div className='cursr' id="profiledropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src={profileImg} className='profile__image me-1 ms-3' alt="" />
+                            <i class="fa-solid fa-sort-down text-white mx-3"></i>
+                        </div>
+                        <ul className="dropdown-menu p-3 profile__menu" aria-labelledby="profiledropdownMenu">
+                            <li>
+                                <NavLink to={"/profile"}><i class="fa-solid fa-user"></i> My profile</NavLink>
+                            </li>
+                            <li>
+                                <a href='' onClick={logOut}><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+    )
+}
+
+export default Header

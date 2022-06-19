@@ -1,0 +1,23 @@
+.profile__image{
+    width: 60px;
+    border-radius: 50%;
+}
+.right__header {
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+}
+.profile__modal {
+    height: auto !important;
+    position: absolute !important;
+    top: 32px !important;
+    width: 200px !important;
+    right: 0;
+    left: auto !important;
+}
+.profile__menu a{
+    color: var(--main-color-2);
+    text-decoration: none;
+}
+.profile__menu a:hover{
+    color: var(--main-color);
+}
