@@ -1,4 +1,5 @@
 import React from 'react'
+import './organisation.css'
 
 const Organisations = () => {
     return (
@@ -41,7 +42,13 @@ const Organisations = () => {
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Lorem, ipsum.</td>
+                                <td>Lorem, ipsum.
+                                    <div className='organization__icons'>
+                                        <i className="fa-solid fa-pen-to-square me-2"></i>
+                                        <i className="fa-solid fa-trash me-2"></i>
+                                        <i className="fa-solid fa-eye me-2"></i>
+                                    </div>
+                                </td>
                                 <td>Lorem.</td>
                                 <td>Lorem, ipsum.@email.com</td>
                                 <td>Lorem ipsum dolor sit.</td>
@@ -56,7 +63,13 @@ const Organisations = () => {
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Lorem, ipsum.</td>
+                                <td>Lorem, ipsum.
+                                    <div className='organization__icons'>
+                                        <i className="fa-solid fa-pen-to-square me-2"></i>
+                                        <i className="fa-solid fa-trash me-2"></i>
+                                        <i className="fa-solid fa-eye me-2"></i>
+                                    </div>
+                                </td>
                                 <td>Lorem.</td>
                                 <td>Lorem, ipsum.@email.com</td>
                                 <td>Lorem ipsum dolor sit.</td>
@@ -71,7 +84,13 @@ const Organisations = () => {
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>Lorem, ipsum.</td>
+                                <td>Lorem, ipsum.
+                                    <div className='organization__icons'>
+                                        <i className="fa-solid fa-pen-to-square me-2"></i>
+                                        <i className="fa-solid fa-trash me-2"></i>
+                                        <i className="fa-solid fa-eye me-2"></i>
+                                    </div>
+                                </td>
                                 <td>Lorem.</td>
                                 <td>Lorem, ipsum.@email.com</td>
                                 <td>Lorem ipsum dolor sit.</td>
@@ -86,7 +105,13 @@ const Organisations = () => {
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Lorem, ipsum.</td>
+                                <td>Lorem, ipsum.
+                                    <div className='organization__icons'>
+                                        <i className="fa-solid fa-pen-to-square me-2"></i>
+                                        <i className="fa-solid fa-trash me-2"></i>
+                                        <i className="fa-solid fa-eye me-2"></i>
+                                    </div>
+                                </td>
                                 <td>Lorem.</td>
                                 <td>Lorem, ipsum.@email.com</td>
                                 <td>Lorem ipsum dolor sit.</td>
