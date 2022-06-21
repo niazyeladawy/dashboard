@@ -46,29 +46,37 @@ const Sidebar = () => {
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <i class="fa-solid fa-hammer" ></i> <span className='ms-2'>Setup</span> 
+                            <i class="fa-solid fa-hammer" ></i> <span className='ms-2'>Setup</span>
                         </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <ul className="accordion-body ps-5">
                             <li>
-                                <a href="component_tabs.html"> Tabs </a>
+                                <NavLink to={"/dashboard/setup/awards"}>
+                                    Awards
+                                </NavLink>
                             </li>
                             <li>
-                                <a href="component_accordion.html"> Accordions </a>
+                                <NavLink to={"/dashboard/setup/countries"}>
+                                    Countries
+                                </NavLink>
                             </li>
                             <li>
-                                <a href="component_modal.html"> Modals </a>
+                                <NavLink to={"/dashboard/setup/grade"}>
+                                    Grade
+                                </NavLink>
                             </li>
                             <li>
-                                <a href="component_cards.html"> Cards </a>
+                                <NavLink to={"/dashboard/setup/schools"}>
+                                    Schools
+                                </NavLink>
                             </li>
                             <li>
-                                <a href="component_bootstrap_carousel.html">Carousel</a>
+                                <NavLink to={"/dashboard/setup/organisations"}>
+                                    Organisations
+                                </NavLink>
                             </li>
-                            <li>
-                                <a href="component_blockui.html"> Block UI </a>
-                            </li>
+
 
                         </ul>
                     </div>

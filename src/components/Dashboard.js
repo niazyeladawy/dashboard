@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom';
 
 import Header from './Header/Header';
 import Navbar from './Navbar/Navbar';
@@ -10,8 +11,9 @@ const Dashboard = () => {
     <div className='home'>
       <Header/>
       <Navbar/>
-      <div>
+      <div className='d-flex'>
         <Sidebar/>
+        <Outlet/>
       </div>
     </div>
   )
