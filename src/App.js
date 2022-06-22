@@ -7,6 +7,7 @@ import Login from './components/Login';
 import ProtectRoute from './components/ProtectRoute';
 import Register from './components/Register';
 import Organisations from './components/Setup/Organisations/Organisations';
+import Schools from './components/Setup/Schools/Schools';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='setup'>
             <Route path='awards' element={<Awards />} />
             <Route path='organisations' element={<Organisations />} />
+            <Route path='schools' element={<Schools />} />
           </Route>
 
         </Route>

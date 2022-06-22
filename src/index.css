@@ -13,9 +13,12 @@ code {
 }
 
 :root {
-  --main-color: #706fa8;
-  --sec-color: #eef0fd --main-color-2: #6C7383;
+  --main-color: #706fa7;
+  --sec-color: #eef0fd;
+  --main-color-3: #6C7383;
   --main-color-2: #EFF1FD;
+  --sec-color-2:#F3A867;
+  
 }
 
 .bg-main-content {
@@ -53,8 +56,12 @@ code {
 .delete-btn {
   background-color: #F3797E;
 }
+.approve-btn{
+  background-color: #A9ABD3;
+}
 
-.add-btn,
+
+.add-btn,.approve-btn,
 .delete-btn {
   color: #fff;
   border: 0;
@@ -74,11 +81,31 @@ thead{
   color: #fff;
 }
 table {
-
   white-space: nowrap;
-
 }
-
+tbody{
+  background-color: #F8F8FD;
+}
 td {
   padding: 10px 20px;
+}
+.status-btn{
+  padding: 7px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.approved{
+  background-color: var(--main-color-2);
+  color: #8E7DD0;
+}
+.pending{
+  color: #A6A9B6;
+}
+.rejected{
+  background-color: #FEE6EB;
+  color: #D96474;
+}
+.option-dropdown{
+  background-color: #A9ABD3 !important;
+  color: #fff !important;
 }
