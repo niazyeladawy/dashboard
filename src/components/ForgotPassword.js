@@ -1,7 +1,14 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Navigate, NavLink, useNavigate } from 'react-router-dom'
 
 export const ForgotPassword = () => {
+  let navigate = useNavigate();
+  
+  const handlesubmit = (e)=>{
+    e.preventDefault();
+    navigate("/resetpassword",{replace:true});
+    
+  }
 
   return (
     <div className='register overflow-hidden'>
@@ -19,7 +26,7 @@ export const ForgotPassword = () => {
               <p>please enter your registered emial address.</p>
               <p className='text-grey'>We will send a verification code to your email</p>
             </div>
-            <form >
+            <form onSubmit={handlesubmit}>
 
               <label htmlFor="email" className="mb-2">Email</label>
               <input placeholder='Your Email' className="form-control mb-3" type="email" name="email" ></input>

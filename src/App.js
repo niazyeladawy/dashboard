@@ -8,6 +8,7 @@ import ProtectRoute from './components/ProtectRoute';
 import Register from './components/Register';
 import Organisations from './components/Setup/Organisations/Organisations';
 import Schools from './components/Setup/Schools/Schools';
+import ResetPassword from './components/ResetPassword';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/forgotpassword' element={<ForgotPassword />} />
+        <Route path='/resetpassword' element={<ResetPassword />} />
         <Route path="/" element={<Navigate replace to="/dashboard" />} />
       </Routes>
     </div>
