@@ -20,12 +20,104 @@ const Schools = () => {
                         </div>
                     </div>
                     <div className='options me-4'>
-                        <button className="btn  dropdown-toggle option-dropdown ms-2" type="button"  >
+                        <button className="btn  dropdown-toggle option-dropdown ms-2" type="button" data-bs-toggle="modal" data-bs-target="#viewOptionsModal" >
                             View Options
                         </button>
-                        <button class="btn dropdown-toggle ms-2 option-dropdown" type="button" >
+                        <button class="btn dropdown-toggle ms-2 option-dropdown" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
                             Filter
                         </button>
+
+
+                        <div className="modal fade" id="viewOptionsModal" tabIndex={-1} aria-labelledby="viewOptionsModalLabel" aria-hidden="true">
+                            <div className="modal-dialog">
+                                <div className="modal-content">
+                                    <div className="modal-body">
+                                        <h4>Columns</h4>
+                                        <form>
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="checkbox" id="addressCheckbox" defaultValue="option1" />
+                                                <label className="form-check-label" htmlFor="addressCheckbox">Address</label>
+                                            </div>
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="checkbox" id="phoneCheckbox" defaultValue="option2" />
+                                                <label className="form-check-label" htmlFor="phoneCheckbox2">Phone Number</label>
+                                            </div>
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="checkbox" id="submitCheckbox" defaultValue="option2" />
+                                                <label className="form-check-label" htmlFor="submitCheckbox2">Submitted By</label>
+                                            </div>
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="checkbox" id="approvedCheckbox" defaultValue="option2" />
+                                                <label className="form-check-label" htmlFor="approvedCheckbox2">Approved By</label>
+                                            </div>
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="checkbox" id="rejectCheckbox" defaultValue="option2" />
+                                                <label className="form-check-label" htmlFor="rejectCheckbox2">Rejected By</label>
+                                            </div>
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="checkbox" id="modifiedCheckbox" defaultValue="option2" />
+                                                <label className="form-check-label" htmlFor="modifiedCheckbox2">Last Modified By</label>
+                                            </div>
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="checkbox" id="statusCheckbox" defaultValue="option2" />
+                                                <label className="form-check-label" htmlFor="statusCheckbox2">Status</label>
+                                            </div>
+                                            <h4 className='mt-3'>Pagination</h4>
+                                            <div className="input-group mb-3 align-items-center">
+                                                <label className="me-3" htmlFor="inputGroupSelect01">Options:</label>
+                                                <select className="form-select" id="inputGroupSelect01">
+
+                                                    <option value={5}>5</option>
+                                                    <option value={10}>10</option>
+                                                    <option value={15}>15</option>
+                                                </select>
+                                            </div>
+                                            <button type='submit' className='approve-btn p-2 px-3 rounded-3'><i className="fa-solid fa-check  me-3"></i> Submit</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="modal fade" id="filterModal" tabIndex={-1} aria-labelledby="filterModalLabel" aria-hidden="true">
+                            <div className="modal-dialog">
+                                <div className="modal-content">
+                                    <div className="modal-body">
+                                        <h4>Filter By</h4>
+                                        <form>
+                                            <div className='d-flex justify-content-start'>
+                                                <div className="input-group mb-3 align-items-center me-3 ">
+                                                    <select className="form-select py-2" id="schoolSelect">
+                                                        <option >School/Tuition</option>
+                                                        <option value={"School"}>School</option>
+                                                        <option value={"Tuition"}>Tuition</option>
+                                                    </select>
+                                                </div>
+                                                <div className="input-group mb-3 align-items-center me-3">
+                                                    <select className="form-select py-2" id="countrySelect">
+                                                        <option >Country</option>
+                                                        <option value={"Egy"}>Egy</option>
+                                                        <option value={"Usa"}>Usa</option>
+                                                    </select>
+                                                </div>
+                                                <div className="input-group mb-3 align-items-center me-3">
+                                                    <select className="form-select py-2" id="statusSelect">
+                                                        <option >Status</option>
+                                                        <option value={"Pending"}>Pending</option>
+                                                        <option value={"Approved"}>Approved</option>
+                                                        <option value={"Rejected"}>Rejected</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <button type='submit' className='approve-btn p-2 px-3 rounded-3'><i class="fa-solid fa-arrow-rotate-right me-3"></i> Reset Filters</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
