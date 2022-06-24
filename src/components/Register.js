@@ -76,7 +76,7 @@ const Register = () => {
         </div>
         <div className='col-lg-5 px-5 col-md-12 '>
           <div className='login__form'>
-            <h1 className='text-uppercase mb-5'>Register</h1>
+            <h1 className='text-uppercase mb-5'><span>Register</span></h1>
             <form onSubmit={formSubmit}>
 
 

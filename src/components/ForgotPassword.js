@@ -1,13 +1,12 @@
 import React from 'react'
-import { Navigate, NavLink, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 export const ForgotPassword = () => {
   let navigate = useNavigate();
-  
-  const handlesubmit = (e)=>{
+
+  const handlesubmit = (e) => {
     e.preventDefault();
-    navigate("/resetpassword",{replace:true});
-    
+    navigate("/resetpassword", { replace: true });
   }
 
   return (
@@ -21,16 +20,18 @@ export const ForgotPassword = () => {
         </div>
         <div className='col-lg-5 px-5 col-md-12 '>
           <div className='login__form'>
-            <h1 className=''>Forget Password?</h1>
+            <h1 className=''><span>Forget</span> Password?</h1>
             <div className='py-5'>
               <p>please enter your registered emial address.</p>
               <p className='text-grey'>We will send a verification code to your email</p>
             </div>
             <form onSubmit={handlesubmit}>
+              <div className='mb-5'>
+                <label htmlFor="email" className="mb-2">Email</label>
+                <input placeholder='Your Email' className="form-control mb-3" type="email" name="email" ></input>
+              </div>
 
-              <label htmlFor="email" className="mb-2">Email</label>
-              <input placeholder='Your Email' className="form-control mb-3" type="email" name="email" ></input>
-              <button  className="btn login__btn mt-3 text-white">Next</button>
+              <button className="btn login__btn mt-3 text-white">Next</button>
             </form>
           </div>
 
