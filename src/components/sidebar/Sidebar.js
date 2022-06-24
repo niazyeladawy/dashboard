@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './sidebar.css'
 import { NavLink } from 'react-router-dom'
 
@@ -6,13 +6,31 @@ const Sidebar = () => {
 
     const [toggleState, settoggleState] = useState(true)
 
-    const handleToggle=()=>{
+    const handleToggle = () => {
         settoggleState(!toggleState);
     }
-    
-    const setToggleTrue = ()=>{
+
+    const setToggleTrue = () => {
         settoggleState(true);
     }
+
+    useEffect(() => {
+
+        function handleResize() {
+            if (window.innerWidth > 992) {
+                settoggleState(true);
+            } else {
+                settoggleState(false);
+            }
+        }
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, [])
+
 
     return (
         <div className='sidebar py-2 position-relative'>
@@ -87,8 +105,8 @@ const Sidebar = () => {
                 </li>
             </ul>
             <div className='toggle-side'>
-                
-                <i className={ toggleState ? "fa-solid fa-angle-left" : "fa-solid fa-angle-right" } onClick={handleToggle}></i>
+
+                <i className={toggleState ? "fa-solid fa-angle-left" : "fa-solid fa-angle-right"} onClick={handleToggle}></i>
             </div>
         </div>
     )
