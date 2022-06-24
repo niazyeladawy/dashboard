@@ -4,19 +4,19 @@ import { NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
 
-    const [collapseStatus, setcollapseStatus] = useState(false);
+    const [toggleState, settoggleState] = useState(true)
 
-    const handleCollapseStatus = () => {
-        setcollapseStatus(!collapseStatus);
+    const handleToggle=()=>{
+        settoggleState(!toggleState);
     }
-
+console.log(toggleState);
     return (
-        <div className='sidebar p-2'>
+        <div className='sidebar py-2 position-relative'>
             <ul className="accordion list-unstyled" id="accordionExample">
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            <i class="fa-solid fa-chart-line"></i> <span className='ms-2'>Dashboard</span>
+                            <i className="fa-solid fa-chart-line"></i>   <span className='ms-2 me-5'>Dashboard</span>
                         </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -46,7 +46,7 @@ const Sidebar = () => {
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <i class="fa-solid fa-hammer" ></i> <span className='ms-2'>Setup</span>
+                            <i className="fa-solid fa-hammer" ></i> <span className='ms-2'>Setup</span>
                         </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -82,6 +82,9 @@ const Sidebar = () => {
                     </div>
                 </li>
             </ul>
+            <div className='toggle-side'>
+                <i className="fa-solid fa-angle-left" onClick={handleToggle}></i>
+            </div>
         </div>
     )
 }

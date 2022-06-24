@@ -1,5 +1,5 @@
 .sidebar {
-    width: 200px;
+    
 }
 
 .sidebar a {
@@ -37,4 +37,20 @@
 }
 .sidebar .accordion-button:focus{
     box-shadow: none;
+}
+.sidebar .toggle-side {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+}
+.sidebar .toggle-side i{
+    background-color: #7575AB;
+    border-radius: 50%;
+    color: #fff;
+    width: 30px;
+    line-height: 10px;
+    padding: 10px;
+    height: 30px;
+    cursor: pointer;
 }

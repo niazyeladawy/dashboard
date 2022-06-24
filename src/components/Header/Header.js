@@ -20,8 +20,8 @@ const Header = () => {
                 <div className='right__header d-flex bg-main align-items-center py-2 px-4' >
                     <div className='position-relative cursr' >
                         <div id="notificationdropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-bell fa-2x text-white mx-2" ></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-special">
+                            <i className="fa-solid fa-bell fa-2x text-white mx-2" ></i>
+                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-special">
                                 5
                             </span>
                         </div>
@@ -35,14 +35,14 @@ const Header = () => {
                     <div className='position-relative'>
                         <div className='cursr' id="profiledropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src={profileImg} className='profile__image me-1 ms-3' alt="" />
-                            <i class="fa-solid fa-sort-down text-white mx-3"></i>
+                            <i className="fa-solid fa-sort-down text-white mx-3"></i>
                         </div>
                         <ul className="dropdown-menu p-3 profile__menu" aria-labelledby="profiledropdownMenu">
                             <li>
-                                <NavLink to={"/profile"}><i class="fa-solid fa-user"></i> My profile</NavLink>
+                                <NavLink to={"/profile"}><i className="fa-solid fa-user"></i> My profile</NavLink>
                             </li>
                             <li>
-                                <a href='' onClick={logOut}><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                                <a href='' onClick={logOut}><i className="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
                             </li>
                         </ul>
 

@@ -40,27 +40,27 @@ const Schools = () => {
                                             </div>
                                             <div className="form-check form-check-inline">
                                                 <input className="form-check-input" type="checkbox" id="phoneCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="phoneCheckbox2">Phone Number</label>
+                                                <label className="form-check-label" htmlFor="phoneCheckbox">Phone Number</label>
                                             </div>
                                             <div className="form-check form-check-inline">
                                                 <input className="form-check-input" type="checkbox" id="submitCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="submitCheckbox2">Submitted By</label>
+                                                <label className="form-check-label" htmlFor="submitCheckbox">Submitted By</label>
                                             </div>
                                             <div className="form-check form-check-inline">
                                                 <input className="form-check-input" type="checkbox" id="approvedCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="approvedCheckbox2">Approved By</label>
+                                                <label className="form-check-label" htmlFor="approvedCheckbox">Approved By</label>
                                             </div>
                                             <div className="form-check form-check-inline">
                                                 <input className="form-check-input" type="checkbox" id="rejectCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="rejectCheckbox2">Rejected By</label>
+                                                <label className="form-check-label" htmlFor="rejectCheckbox">Rejected By</label>
                                             </div>
                                             <div className="form-check form-check-inline">
                                                 <input className="form-check-input" type="checkbox" id="modifiedCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="modifiedCheckbox2">Last Modified By</label>
+                                                <label className="form-check-label" htmlFor="modifiedCheckbox">Last Modified By</label>
                                             </div>
                                             <div className="form-check form-check-inline">
                                                 <input className="form-check-input" type="checkbox" id="statusCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="statusCheckbox2">Status</label>
+                                                <label className="form-check-label" htmlFor="statusCheckbox">Status</label>
                                             </div>
                                             <h4 className='mt-3'>Pagination</h4>
                                             <div className="input-group mb-3 align-items-center">
