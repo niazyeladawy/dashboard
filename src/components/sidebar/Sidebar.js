@@ -9,13 +9,17 @@ const Sidebar = () => {
     const handleToggle=()=>{
         settoggleState(!toggleState);
     }
-console.log(toggleState);
+    
+    const setToggleTrue = ()=>{
+        settoggleState(true);
+    }
+
     return (
         <div className='sidebar py-2 position-relative'>
-            <ul className="accordion list-unstyled" id="accordionExample">
+            <ul className={toggleState ? "accordion list-unstyled" : "accordion list-unstyled hide-side"} id="accordionExample">
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <button className="accordion-button collapsed" onClick={setToggleTrue} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             <i className="fa-solid fa-chart-line"></i>   <span className='ms-2 me-5'>Dashboard</span>
                         </button>
                     </h2>
@@ -45,7 +49,7 @@ console.log(toggleState);
                 </li>
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button onClick={setToggleTrue} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <i className="fa-solid fa-hammer" ></i> <span className='ms-2'>Setup</span>
                         </button>
                     </h2>
@@ -83,7 +87,8 @@ console.log(toggleState);
                 </li>
             </ul>
             <div className='toggle-side'>
-                <i className="fa-solid fa-angle-left" onClick={handleToggle}></i>
+                
+                <i className={ toggleState ? "fa-solid fa-angle-left" : "fa-solid fa-angle-right" } onClick={handleToggle}></i>
             </div>
         </div>
     )
