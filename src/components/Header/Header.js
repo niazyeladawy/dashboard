@@ -42,7 +42,10 @@ const Header = () => {
                                 <NavLink to={"/"}><i class="fa-solid fa-house"></i> Home</NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/profile"}><i className="fa-solid fa-user"></i> My profile</NavLink>
+                                <NavLink to={"/dashboard/settings/profile"}>
+                                <i className="fa-solid fa-user"></i> My profile
+                                </NavLink>
+                                
                             </li>
                             <li>
                                 <a href='' onClick={logOut}><i className="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>

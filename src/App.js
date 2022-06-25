@@ -10,6 +10,10 @@ import Organisations from './components/Setup/Organisations/Organisations';
 import Schools from './components/Setup/Schools/Schools';
 import ResetPassword from './components/ResetPassword';
 import Profile from './components/settings/Profile/Profile';
+import Users from './components/manage users/Users/Users';
+import Administrators from './components/manage users/Administrators/Administrators';
+import CountryPartners from './components/manage users/Country Partners/CountryPartners';
+import TeacherSuperAdmins from './components/manage users/Teacher Super Admins/TeacherSuperAdmins';
 
 function App() {
   return (
@@ -25,6 +29,12 @@ function App() {
           </Route>
           <Route path='settings'>
             <Route path='profile' element={<Profile />} />
+          </Route>
+          <Route path='manage-users'>
+            <Route path='users' element={<Users />} />
+            <Route path='administrators' element={<Administrators />} />
+            <Route path='country-Partners' element={<CountryPartners />} />
+            <Route path='teacher-super-admins' element={<TeacherSuperAdmins />} />
           </Route>
         </Route>
 

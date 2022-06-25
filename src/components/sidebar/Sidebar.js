@@ -4,6 +4,10 @@ import { NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
 
+    let activeStyle = {
+        fontWeight: "800",
+    };
+
     const [toggleState, settoggleState] = useState(true)
 
     const handleToggle = () => {
@@ -29,7 +33,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className='sidebar py-2 position-relative'>
+        <div className='sidebar pb-2 position-relative'>
             <ul className={toggleState ? "accordion list-unstyled" : "accordion list-unstyled hide-side"} id="accordionExample">
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
@@ -42,22 +46,6 @@ const Sidebar = () => {
                             <li>
                                 <a href="component_tabs.html"> Tabs </a>
                             </li>
-                            <li>
-                                <a href="component_accordion.html"> Accordions </a>
-                            </li>
-                            <li>
-                                <a href="component_modal.html"> Modals </a>
-                            </li>
-                            <li>
-                                <a href="component_cards.html"> Cards </a>
-                            </li>
-                            <li>
-                                <a href="component_bootstrap_carousel.html">Carousel</a>
-                            </li>
-                            <li>
-                                <a href="component_blockui.html"> Block UI </a>
-                            </li>
-
                         </ul>
                     </div>
                 </li>
@@ -70,28 +58,77 @@ const Sidebar = () => {
                     <div id="collapseTwo" className="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <ul className="accordion-body ps-5">
                             <li>
-                                <NavLink to={"/dashboard/setup/awards"}>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/setup/awards"}>
                                     Awards
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/dashboard/setup/countries"}>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/setup/countries"}>
                                     Countries
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/dashboard/setup/grade"}>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/setup/grade"}>
                                     Grade
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/dashboard/setup/schools"}>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/setup/schools"}>
                                     Schools
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/dashboard/setup/organisations"}>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/setup/organisations"}>
                                     Organisations
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
+                        <button onClick={setToggleTrue} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUsers" aria-expanded="false" aria-controls="collapseUsers">
+                            <i class="fa-solid fa-user-group"></i> <span className='ms-2'>Manage Users</span>
+                        </button>
+                    </h2>
+                    <div id="collapseUsers" className="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <ul className="accordion-body ps-5">
+                            <li>
+                                <NavLink to={"/dashboard/manage-users/users"} style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                }>
+                                    Users
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                }   to={"/dashboard/manage-users/administrators"}>
+                                    Administrators
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink  style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                }  to={"/dashboard/manage-users/country-Partners"}>
+                                    Country Partners
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink  style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/manage-users/teacher-super-admins"}>
+                                    Teacher Super Admins
                                 </NavLink>
                             </li>
                         </ul>
@@ -106,7 +143,9 @@ const Sidebar = () => {
                     <div id="collapsesettings" className="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <ul className="accordion-body ps-5">
                             <li>
-                                <NavLink to={"/dashboard/settings/profile"}>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/settings/profile"}>
                                     Profile
                                 </NavLink>
                             </li>

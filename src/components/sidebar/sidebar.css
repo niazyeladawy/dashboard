@@ -1,4 +1,6 @@
-
+.sidebar{
+    font-family: 'Nunito', sans-serif;
+}
 .sidebar a {
     text-decoration: none;
     color: var(--main-color-2);
@@ -67,10 +69,22 @@
     transition: all .5s;
     margin-right: 0 !important;
 }
+.sidebar .accordion-body {
+    padding-left: 60px !important;
+    list-style: disc !important; 
+    
+}
 .sidebar .hide-side .accordion-button::after{
     width: 0;
     transition: all .5s;
 }
 .sidebar .accordion-body li{
     transition: all .5s;
+}
+.sidebar .accordion-body li a{
+    color: #fff;
+}
+
+.sidebar .accordion-header .collapsed i{
+    color: var(--main-color-3);
 }
