@@ -9,6 +9,7 @@ import Register from './components/Register';
 import Organisations from './components/Setup/Organisations/Organisations';
 import Schools from './components/Setup/Schools/Schools';
 import ResetPassword from './components/ResetPassword';
+import Profile from './components/settings/Profile/Profile';
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
             <Route path='organisations' element={<Organisations />} />
             <Route path='schools' element={<Schools />} />
           </Route>
-
+          <Route path='settings'>
+            <Route path='profile' element={<Profile />} />
+          </Route>
         </Route>
 
         <Route path='/login' element={<Login />} />

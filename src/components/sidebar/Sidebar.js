@@ -15,7 +15,6 @@ const Sidebar = () => {
     }
 
     useEffect(() => {
-
         function handleResize() {
             if (window.innerWidth > 992) {
                 settoggleState(true);
@@ -23,11 +22,8 @@ const Sidebar = () => {
                 settoggleState(false);
             }
         }
-
         handleResize();
-
         window.addEventListener("resize", handleResize);
-
         return () => window.removeEventListener("resize", handleResize);
     }, [])
 
@@ -98,8 +94,22 @@ const Sidebar = () => {
                                     Organisations
                                 </NavLink>
                             </li>
-
-
+                        </ul>
+                    </div>
+                </li>
+                <li className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
+                        <button onClick={setToggleTrue} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesettings" aria-expanded="false" aria-controls="collapsesettings">
+                            <i class="fa-solid fa-gear"></i> <span className='ms-2'>Settings</span>
+                        </button>
+                    </h2>
+                    <div id="collapsesettings" className="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <ul className="accordion-body ps-5">
+                            <li>
+                                <NavLink to={"/dashboard/settings/profile"}>
+                                    Profile
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                 </li>

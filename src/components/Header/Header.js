@@ -37,7 +37,10 @@ const Header = () => {
                             <img src={profileImg} className='profile__image me-1 ms-3' alt="" />
                             <i className="fa-solid fa-sort-down text-white mx-3"></i>
                         </div>
-                        <ul className="dropdown-menu p-3 profile__menu" aria-labelledby="profiledropdownMenu">
+                        <ul className="dropdown-menu p-3 profile__menu shadow-sm" aria-labelledby="profiledropdownMenu">
+                            <li>
+                                <NavLink to={"/"}><i class="fa-solid fa-house"></i> Home</NavLink>
+                            </li>
                             <li>
                                 <NavLink to={"/profile"}><i className="fa-solid fa-user"></i> My profile</NavLink>
                             </li>
