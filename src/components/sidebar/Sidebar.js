@@ -98,7 +98,7 @@ const Sidebar = () => {
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                         <button onClick={setToggleTrue} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUsers" aria-expanded="false" aria-controls="collapseUsers">
-                            <i class="fa-solid fa-user-group"></i> <span className='ms-2'>Manage Users</span>
+                            <i className="fa-solid fa-user-group"></i> <span className='ms-2'>Manage Users</span>
                         </button>
                     </h2>
                     <div id="collapseUsers" className="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -137,7 +137,7 @@ const Sidebar = () => {
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                         <button onClick={setToggleTrue} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesettings" aria-expanded="false" aria-controls="collapsesettings">
-                            <i class="fa-solid fa-gear"></i> <span className='ms-2'>Settings</span>
+                            <i className="fa-solid fa-gear"></i> <span className='ms-2'>Settings</span>
                         </button>
                     </h2>
                     <div id="collapsesettings" className="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">

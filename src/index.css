@@ -56,7 +56,7 @@ code {
 }
 
 
-.add-btn,.approve-btn,
+.add-btn,.approve-btn,  
 .delete-btn {
   color: #fff;
   border: 0;
@@ -84,22 +84,7 @@ tbody{
 td {
   padding: 10px 20px;
 }
-.status-btn{
-  padding: 7px 15px;
-  border-radius: 10px;
-  font-weight: bold;
-}
-.approved{
-  background-color: var(--main-color-2);
-  color: #8E7DD0;
-}
-.pending{
-  color: #A6A9B6;
-}
-.rejected{
-  background-color: #FEE6EB;
-  color: #D96474;
-}
+
 .option-dropdown{
   background-color: #A9ABD3 !important;
   color: #fff !important;
@@ -107,4 +92,7 @@ td {
 .my-big{
   margin-top: 6rem;
   margin-bottom: 6rem;
+}
+.options{
+  margin-bottom: 30px;
 }

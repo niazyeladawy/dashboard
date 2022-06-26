@@ -39,7 +39,7 @@ const Header = () => {
                         </div>
                         <ul className="dropdown-menu p-3 profile__menu shadow-sm" aria-labelledby="profiledropdownMenu">
                             <li>
-                                <NavLink to={"/"}><i class="fa-solid fa-house"></i> Home</NavLink>
+                                <NavLink to={"/"}><i className="fa-solid fa-house"></i> Home</NavLink>
                             </li>
                             <li>
                                 <NavLink to={"/dashboard/settings/profile"}>
