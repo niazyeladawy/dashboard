@@ -1,6 +1,9 @@
 .profile__image{
-    width: 60px;
+    width: 50px;
     border-radius: 50%;
+}
+.header .logo img{
+    width: 75px;
 }
 .right__header {
     border-top-left-radius: 500px;

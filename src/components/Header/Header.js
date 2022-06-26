@@ -14,13 +14,13 @@ const Header = () => {
     return (
         <div className="header">
             <div className='header__content d-flex justify-content-between align-items-center'>
-                <div>
+                <div className='logo'>
                     <img src={logo} alt="" />
                 </div>
-                <div className='right__header d-flex bg-main align-items-center py-2 px-4' >
+                <div className='right__header d-flex bg-main align-items-center py-1 px-4' >
                     <div className='position-relative cursr' >
                         <div id="notificationdropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i className="fa-solid fa-bell fa-2x text-white mx-2" ></i>
+                            <i className="fa-solid fa-bell text-white mx-2" ></i>
                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-special">
                                 5
                             </span>

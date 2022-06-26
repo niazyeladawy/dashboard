@@ -68,11 +68,18 @@
     font-size: 0 ;
     transition: all .5s;
     margin-right: 0 !important;
+    margin: 0 !important;
 }
 .sidebar .accordion-body {
     padding-left: 60px !important;
-    list-style: disc !important; 
-    
+    list-style: disc !important;
+}
+.sidebar .hide-side  .accordion-body {
+    padding: 0 !important;
+    list-style: disc !important;
+}
+.sidebar .hide-side  .accordion-button {
+    border-radius: 0 !important;
 }
 .sidebar .hide-side .accordion-button::after{
     width: 0;
