@@ -76,6 +76,8 @@ thead{
 table {
   white-space: nowrap;
   font-family: 'Nunito', sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
 }
 tbody{
   background-color: #F8F8FD;
