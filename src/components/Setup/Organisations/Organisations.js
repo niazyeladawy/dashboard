@@ -1,4 +1,5 @@
 import React from 'react'
+import DeleteModal from '../../delete modal/DeleteModal'
 import './organisation.css'
 
 const Organisations = () => {
@@ -126,9 +127,10 @@ const Organisations = () => {
                             <tr>
                                 <td>1</td>
                                 <td>Lorem, ipsum.
-                                    <div className='organization__icons'>
+                                    <div className='organization__icons__icons'>
                                         <i className="fa-solid fa-pen-to-square me-2"></i>
-                                        <i className="fa-solid fa-trash me-2"></i>
+                                        <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{type:"an organisation",content:"Lorem, ipsum."}} />
                                         <i className="fa-solid fa-eye me-2"></i>
                                     </div>
                                 </td>
@@ -149,7 +151,8 @@ const Organisations = () => {
                                 <td>Lorem, ipsum.
                                     <div className='organization__icons'>
                                         <i className="fa-solid fa-pen-to-square me-2"></i>
-                                        <i className="fa-solid fa-trash me-2"></i>
+                                        <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{type:"an organisation",content:"Lorem, ipsum."}} />
                                         <i className="fa-solid fa-eye me-2"></i>
                                     </div>
                                 </td>
@@ -170,7 +173,8 @@ const Organisations = () => {
                                 <td>Lorem, ipsum.
                                     <div className='organization__icons'>
                                         <i className="fa-solid fa-pen-to-square me-2"></i>
-                                        <i className="fa-solid fa-trash me-2"></i>
+                                        <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{type:"an organisation",content:"Lorem, ipsum."}} />
                                         <i className="fa-solid fa-eye me-2"></i>
                                     </div>
                                 </td>
@@ -191,7 +195,8 @@ const Organisations = () => {
                                 <td>Lorem, ipsum.
                                     <div className='organization__icons'>
                                         <i className="fa-solid fa-pen-to-square me-2"></i>
-                                        <i className="fa-solid fa-trash me-2"></i>
+                                        <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{type:"an organisation",content:"Lorem, ipsum."}} />
                                         <i className="fa-solid fa-eye me-2"></i>
                                     </div>
                                 </td>

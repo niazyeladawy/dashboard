@@ -1,4 +1,5 @@
 import React from 'react'
+import DeleteModal from '../../delete modal/DeleteModal'
 import './schools.css'
 
 const Schools = () => {
@@ -160,7 +161,8 @@ const Schools = () => {
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='school__icons'>
                                             <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i className="fa-solid fa-trash me-2"></i>
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{type:"a school",content:"Lorem, ipsum."}} />
                                             <i class="fa-solid fa-user-plus"></i>
                                             <i class="fa-solid fa-user-ninja"></i>
                                         </div>
@@ -183,7 +185,8 @@ const Schools = () => {
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='school__icons'>
                                             <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i className="fa-solid fa-trash me-2"></i>
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{type:"a school",content:"Lorem, ipsum."}} />
                                             <i class="fa-solid fa-user-plus me-2"></i>
                                             <i class="fa-solid fa-user-ninja me-2"></i>
                                         </div>
@@ -206,7 +209,8 @@ const Schools = () => {
                                     <td className='pending_icons'>Lorem, ipsum.
                                         <div className='school__icons'>
                                             <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i className="fa-solid fa-trash me-2"></i>
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{type:"a school",content:"Lorem, ipsum."}} />
                                             <i class="fa-solid fa-square-check me-2"></i>
                                             <i class="fa-solid fa-square-xmark me-2"></i>
                                         </div>
@@ -222,14 +226,15 @@ const Schools = () => {
                                     <td>Lorem, ipsum.</td>
                                     <td>Lorem, ipsum.</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn pending'>Approved</span></td>
+                                    <td className=''><span className='status-btn pending'>Pending</span></td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td className='pending_icons'>Lorem, ipsum.
                                         <div className='school__icons'>
                                             <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i className="fa-solid fa-trash me-2"></i>
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{type:"a school",content:"Lorem, ipsum."}} />
                                             <i class="fa-solid fa-square-check me-2"></i>
                                             <i class="fa-solid fa-square-xmark me-2"></i>
                                         </div>
@@ -245,7 +250,7 @@ const Schools = () => {
                                     <td>Lorem, ipsum.</td>
                                     <td>Lorem, ipsum.</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn pending'>Approved</span></td>
+                                    <td className=''><span className='status-btn pending'>Pending</span></td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
