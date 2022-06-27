@@ -1,5 +1,9 @@
 import React from 'react'
-import DeleteModal from '../../delete modal/DeleteModal'
+import ApproveModal from '../../Modals/approvemodal/ApproveModal'
+import DeleteModal from '../../Modals/delete modal/DeleteModal'
+import EditModal from '../../Modals/edit modal/EditModal'
+import RejectModal from '../../Modals/reject modal/RejectModal'
+import RestoreModal from '../../Modals/restore modal/RestoreModal'
 import './schools.css'
 
 const Schools = () => {
@@ -160,9 +164,10 @@ const Schools = () => {
                                     <td>1</td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                                            <DeleteModal deleteData={{type:"a school",content:"Lorem, ipsum."}} />
+                                            <DeleteModal deleteData={{ type: "a school", content: "Lorem, ipsum." }} />
                                             <i class="fa-solid fa-user-plus"></i>
                                             <i class="fa-solid fa-user-ninja"></i>
                                         </div>
@@ -184,9 +189,10 @@ const Schools = () => {
                                     <td>2</td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                                            <DeleteModal deleteData={{type:"a school",content:"Lorem, ipsum."}} />
+                                            <DeleteModal deleteData={{ type: "a school", content: "Lorem, ipsum." }} />
                                             <i class="fa-solid fa-user-plus me-2"></i>
                                             <i class="fa-solid fa-user-ninja me-2"></i>
                                         </div>
@@ -208,11 +214,14 @@ const Schools = () => {
                                     <td>3</td>
                                     <td className='pending_icons'>Lorem, ipsum.
                                         <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                                            <DeleteModal deleteData={{type:"a school",content:"Lorem, ipsum."}} />
-                                            <i class="fa-solid fa-square-check me-2"></i>
-                                            <i class="fa-solid fa-square-xmark me-2"></i>
+                                            <DeleteModal deleteData={{ type: "a school", content: "Lorem, ipsum." }} />
+                                            <i class="fa-solid fa-square-check me-2" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
+                                            <ApproveModal approveData={{ type: "a school", content: "Lorem, ipsum." }} />
+                                            <i class="fa-solid fa-square-xmark me-2" data-bs-toggle="modal" data-bs-target="#rejectModal"></i>
+                                            <RejectModal rejectData={{ type: "a school", content: "Lorem, ipsum." }} />
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
@@ -232,11 +241,13 @@ const Schools = () => {
                                     <td>4</td>
                                     <td className='pending_icons'>Lorem, ipsum.
                                         <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                                            <DeleteModal deleteData={{type:"a school",content:"Lorem, ipsum."}} />
-                                            <i class="fa-solid fa-square-check me-2"></i>
-                                            <i class="fa-solid fa-square-xmark me-2"></i>
+                                            <DeleteModal deleteData={{ type: "a school", content: "Lorem, ipsum." }} />
+                                            <i class="fa-solid fa-square-check me-2" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
+                                            <i class="fa-solid fa-square-xmark me-2" data-bs-toggle="modal" data-bs-target="#rejectModal"></i>
+                                            <RejectModal rejectData={{ type: "a school", content: "Lorem, ipsum." }} />
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
@@ -256,8 +267,10 @@ const Schools = () => {
                                     <td>5</td>
                                     <td className='rejected_icons'>Lorem, ipsum.
                                         <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i class="fa-solid fa-trash-arrow-up me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
+                                            <i class="fa-solid fa-trash-arrow-up me-2"  data-bs-toggle="modal" data-bs-target="#restoreModal"></i>
+                                            <RestoreModal restoreData={{ type: "a school", content: "Lorem, ipsum." }}  />
 
                                         </div>
                                     </td>
