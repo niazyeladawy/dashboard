@@ -1,22 +1,32 @@
 import React from 'react'
-import './schools.css'
+import FilterModal from '../../filter modal/FilterModal'
+import ViewOptionModal from '../../vire options modal/ViewOptionModal'
+import './paticipant.css'
 
-const Schools = () => {
+const Participants = () => {
     return (
         <div className='schools overflow-hidden'>
-            <div className='flex-grow-1 bg-main-content py-5 px-3 overflow-hidden'>
-                <h2 className='text-main'>Schools</h2>
+            <div className='flex-grow-1 bg-main-content py-5 pt-4 px-3 overflow-hidden'>
+                <h2 className='text-main '>Participants</h2>
                 <div className='d-flex justify-content-between align-items-center mb-3'>
                     <div className='status d-flex'>
                         <div className='pending-item rounded-3 shadow px-4 py-2 bg-white text-center me-3'>
-                            <i class="fa-solid fa-clock-rotate-left fa-2x"></i>
-                            <span className='d-block fs-4 fw-bold'>  11</span>
-                            <p className='mb-0'>Pending Schools</p>
+                            <i class="fa-solid fa-chart-simple fa-2x"></i>
+                            <span className='d-block fs-4 fw-bold'>  SASMO 2022</span>
+                            <p className='mb-0'>Competition</p>
                         </div>
                         <div className='total-item rounded-3 shadow px-4 py-2 bg-white text-center me-3'>
-                            <i class="fa-solid fa-school fa-2x"></i>
-                            <span className='d-block fs-4 fw-bold'> 100</span>
-                            <p className='mb-0'>Total Schools</p>
+                            <i class="fa-solid fa-user fa-2x"></i>
+                            <span className='d-block fs-4 fw-bold'> 145</span>
+                            <p className='mb-0'>Total Active Participants</p>
+                        </div>
+                        <div className='stats-item  rounded-3 shadow px-4 py-2 bg-white  me-3'>
+                            <p>Grade 1 <span>55</span></p>
+                            <p>Grade 2 <span>90</span></p>
+                        </div>
+                        <div className='stats-item  rounded-3 shadow px-4 py-2 bg-white  me-3'>
+                            <p>Private <span>40</span></p>
+                            <p>Public <span>105</span></p>
                         </div>
                     </div>
                     <div className='options me-4'>
@@ -26,105 +36,21 @@ const Schools = () => {
                         <button class="btn dropdown-toggle ms-2 option-dropdown" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
                             Filter
                         </button>
-
-
-                        <div className="modal fade" id="viewOptionsModal" tabIndex={-1} aria-labelledby="viewOptionsModalLabel" aria-hidden="true">
-                            <div className="modal-dialog">
-                                <div className="modal-content">
-                                    <div className="modal-body">
-                                        <h4>Columns</h4>
-                                        <form>
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="checkbox" id="addressCheckbox" defaultValue="option1" />
-                                                <label className="form-check-label" htmlFor="addressCheckbox">Address</label>
-                                            </div>
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="checkbox" id="phoneCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="phoneCheckbox">Phone Number</label>
-                                            </div>
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="checkbox" id="submitCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="submitCheckbox">Submitted By</label>
-                                            </div>
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="checkbox" id="approvedCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="approvedCheckbox">Approved By</label>
-                                            </div>
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="checkbox" id="rejectCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="rejectCheckbox">Rejected By</label>
-                                            </div>
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="checkbox" id="modifiedCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="modifiedCheckbox">Last Modified By</label>
-                                            </div>
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="checkbox" id="statusCheckbox" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="statusCheckbox">Status</label>
-                                            </div>
-                                            <h4 className='mt-3'>Pagination</h4>
-                                            <div className="input-group mb-3 align-items-center">
-                                                <label className="me-3" htmlFor="inputGroupSelect01">Options:</label>
-                                                <select className="form-select" id="inputGroupSelect01">
-
-                                                    <option value={5}>5</option>
-                                                    <option value={10}>10</option>
-                                                    <option value={15}>15</option>
-                                                </select>
-                                            </div>
-                                            <button type='submit' className='approve-btn p-2 px-3 rounded-3'><i className="fa-solid fa-check  me-3"></i> Submit</button>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div className="modal fade" id="filterModal" tabIndex={-1} aria-labelledby="filterModalLabel" aria-hidden="true">
-                            <div className="modal-dialog">
-                                <div className="modal-content">
-                                    <div className="modal-body">
-                                        <h4>Filter By</h4>
-                                        <form>
-                                            <div className='d-flex justify-content-start'>
-                                                <div className="input-group mb-3 align-items-center me-3 ">
-                                                    <select className="form-select py-2" id="schoolSelect">
-                                                        <option >School/Tuition</option>
-                                                        <option value={"School"}>School</option>
-                                                        <option value={"Tuition"}>Tuition</option>
-                                                    </select>
-                                                </div>
-                                                <div className="input-group mb-3 align-items-center me-3">
-                                                    <select className="form-select py-2" id="countrySelect">
-                                                        <option >Country</option>
-                                                        <option value={"Egy"}>Egy</option>
-                                                        <option value={"Usa"}>Usa</option>
-                                                    </select>
-                                                </div>
-                                                <div className="input-group mb-3 align-items-center me-3">
-                                                    <select className="form-select py-2" id="statusSelect">
-                                                        <option >Status</option>
-                                                        <option value={"Pending"}>Pending</option>
-                                                        <option value={"Approved"}>Approved</option>
-                                                        <option value={"Rejected"}>Rejected</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <button type='submit' className='approve-btn p-2 px-3 rounded-3'><i class="fa-solid fa-arrow-rotate-right me-3"></i> Reset Filters</button>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
+                        <ViewOptionModal columns={{
+                            name: "Columns",
+                            content: ["Country", "Grade", "School", "Class", "Tuition Centre", "Competition/Assessment", "Partner", "Teachers","Created By","Last Modified By","Created By"]
+                        }} />``
+                        <FilterModal filterby={[{ name: "School/Tuition", content: ["School", "Tuition"] }, { name: "Country", content: ["Egypt", "China", "USA"] },{ name: "Grade", content: [1,2,3] },{ name: "Competition", content: ["Disabled", "Enabled"] }, { name: "Status", content: ["Disabled", "Enabled"] }]} />
                     </div>
                 </div>
 
                 <div className='d-flex justify-content-between mt-2 align-items-center'>
                     <div className='d-flex'>
-                        <button className='add-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-plus'></i> Add New School</button>
-                        <button className='approve-btn shadow-sm py-1 px-3 me-3'><i class="fa-solid fa-check"></i> Mass Approve</button>
+                        <button className='add-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-plus'></i> Add New Participant</button>
+                        <button className='add-btn shadow-sm py-1 px-3 me-3'><i className="fa-solid fa-arrow-right-arrow-left"></i> Swap Index</button>
+                        <button className='add-btn shadow-sm py-1 px-3 me-3'><i className='fa-solid fa-file-export'></i> Export CSV</button>
+                        <button className='add-btn shadow-sm py-1 px-3 me-3'><i className='fa-solid fa-file-import'></i> Import CSV</button>
+                        
                         <button className='delete-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-trash'></i> Mass Delete</button>
                     </div>
                     <div className='border-b-main'>
@@ -278,4 +204,4 @@ const Schools = () => {
     )
 }
 
-export default Schools
+export default Participants

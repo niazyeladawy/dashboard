@@ -136,6 +136,45 @@ const Sidebar = () => {
                 </li>
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
+                        <button onClick={setToggleTrue} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCompetition" aria-expanded="false" aria-controls="collapseCompetition">
+                            <i className="fa-solid fa-newspaper"></i> <span className='ms-2'>Manage Competitions</span>
+                        </button>
+                    </h2>
+                    <div id="collapseCompetition" className="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <ul className="accordion-body ps-5">
+                            <li>
+                                <NavLink to={"/dashboard/manage-competitions/competitions"} style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                }>
+                                    Competitions
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                }   to={"/dashboard/manage-competitions/competition-sessions"}>
+                                    Competition Sessions
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink  style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                }  to={"/dashboard/manage-competitions/participants"}>
+                                    Participants
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink  style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/manage-competitions/pending-partners-competition-date"}>
+                                    Pending Partners <br />Competition Date
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
                         <button onClick={setToggleTrue} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesettings" aria-expanded="false" aria-controls="collapsesettings">
                             <i className="fa-solid fa-gear"></i> <span className='ms-2'>Settings</span>
                         </button>

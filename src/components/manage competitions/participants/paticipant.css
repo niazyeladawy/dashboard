@@ -1,0 +1,18 @@
+.stats-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.stats-item p{
+    color: var(--sec-color-2);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.stats-item p span{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}

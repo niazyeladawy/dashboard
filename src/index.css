@@ -2,9 +2,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Nunito', sans-serif !important; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -96,4 +94,11 @@ td {
 }
 .options{
   margin-bottom: 30px;
+}
+h2{
+  font-family: 'Nunito', sans-serif;
+}
+.overflow-hidden h2{
+  font-weight: bold;
+  margin-bottom: 16px !important;
 }

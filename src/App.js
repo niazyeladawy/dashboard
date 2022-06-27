@@ -14,6 +14,10 @@ import Users from './components/manage users/Users/Users';
 import Administrators from './components/manage users/Administrators/Administrators';
 import CountryPartners from './components/manage users/Country Partners/CountryPartners';
 import TeacherSuperAdmins from './components/manage users/Teacher Super Admins/TeacherSuperAdmins';
+import Competitions from './components/manage competitions/competitions/Competitions';
+import CompetitionSessions from './components/manage competitions/competition sessions/CompetitionSessions';
+import Participants from './components/manage competitions/participants/Participants';
+import PendingPartnersCompetitionDate from './components/manage competitions/Pending Partners\' Competition Date/PendingPartnersCompetitionDate';
 
 function App() {
   return (
@@ -35,6 +39,12 @@ function App() {
             <Route path='administrators' element={<Administrators />} />
             <Route path='country-Partners' element={<CountryPartners />} />
             <Route path='teacher-super-admins' element={<TeacherSuperAdmins />} />
+          </Route>
+          <Route path='manage-competitions'>
+            <Route path='competitions' element={<Competitions />} />
+            <Route path='competition-sessions' element={<CompetitionSessions />} />
+            <Route path='participants' element={<Participants />} />
+            <Route path='pending-partners-competition-date' element={<PendingPartnersCompetitionDate/>} />
           </Route>
         </Route>
 
