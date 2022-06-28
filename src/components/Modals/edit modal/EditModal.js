@@ -17,7 +17,10 @@ const EditModal = ({ editData }) => {
                                     editData.content.map((item, idx) => (
                                         <div className=" item mb-3" key={idx}>
                                             <label htmlFor={`exampleInput${item}`} className="form-label">{item}</label>
-                                            <input type="text" className="form-control" id={`exampleInput${item}`} aria-describedby="emailHelp" placeholder={`Enter ${item}`} />
+                                            {
+                                                (item === "Password")||(item === "Confirm Password") ? <input type="password" className="form-control" id={`exampleInput${item}`} aria-describedby="emailHelp" placeholder={`Enter ${item}`} /> :<input type="text" className="form-control" id={`exampleInput${item}`} aria-describedby="emailHelp" placeholder={`Enter ${item}`} />
+                                            }
+                                           
 
                                         </div>
                                     ))

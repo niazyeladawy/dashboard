@@ -1,6 +1,12 @@
 import React from 'react'
-import FilterModal from '../../filter modal/FilterModal'
-import ViewOptionModal from '../../vire options modal/ViewOptionModal'
+import ApproveModal from '../../Modals/approvemodal/ApproveModal'
+import DeleteModal from '../../Modals/delete modal/DeleteModal'
+import DisableModal from '../../Modals/disable modal/DisableModal'
+import EditModal from '../../Modals/edit modal/EditModal'
+import FilterModal from '../../Modals/filter modal/FilterModal'
+import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
+import { Link } from "react-router-dom";
+
 import './user.css'
 
 const Users = () => {
@@ -16,11 +22,11 @@ const Users = () => {
           Filter
         </button>
         <ViewOptionModal columns={{
-          name:"Columns",
-          content:["Address","Phone Number","No. of Partners","Person-in-charge","Billing Address","Shipping Address","Created By","Last Modified By"]
-        }}/>
-        
-        <FilterModal filterby={[{name:"Role",content:["Admin","Teacher","Country Partner"]},{name:"Country",content:["Egypt","China","USA"]},{name:"Status",content:["Disabled","Enabled"]}]}/>
+          name: "Columns",
+          content: ["Address", "Phone Number", "No. of Partners", "Person-in-charge", "Billing Address", "Shipping Address", "Created By", "Last Modified By"]
+        }} />
+
+        <FilterModal filterby={[{ name: "Role", content: ["Admin", "Teacher", "Country Partner"] }, { name: "Country", content: ["Egypt", "China", "USA"] }, { name: "Status", content: ["Disabled", "Enabled"] }]} />
 
       </div>
       <div className='d-flex justify-content-between mt-2 align-items-center'>
@@ -57,10 +63,17 @@ const Users = () => {
                 <td>1</td>
                 <td>Lorem, ipsum.
                   <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2"></i>
-                    <i className="fa-solid fa-trash me-2"></i>
-                    <i className="fa-solid fa-user-check me-2 enabled-icon"></i>
-                    <i className="fa-solid fa-eye me-2"></i>
+                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
+                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
+                    <i className="fa-solid fa-user-check me-2 enabled-icon" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
+                    <ApproveModal approveData={{ type: "a user", content: "Lorem, ipsum." }} />
+                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                      <i className="fa-solid fa-eye me-2"></i>
+                    </Link>
+                    
+
                   </div>
                 </td>
                 <td>Lorem.</td>
@@ -76,9 +89,12 @@ const Users = () => {
                 <td>2</td>
                 <td>Lorem, ipsum.
                   <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2"></i>
-                    <i className="fa-solid fa-trash me-2"></i>
-                    <i className="fa-solid fa-user-check me-2 enabled-icon"></i>
+                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
+                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
+                    <i className="fa-solid fa-user-check me-2 enabled-icon" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
+                    <ApproveModal approveData={{ type: "a user", content: "Lorem, ipsum." }} />
                     <i className="fa-solid fa-eye me-2"></i>
                   </div>
                 </td>
@@ -95,9 +111,12 @@ const Users = () => {
                 <td>3</td>
                 <td>Lorem, ipsum.
                   <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2"></i>
-                    <i className="fa-solid fa-trash me-2"></i>
-                    <i className="fa-solid fa-user-check me-2 enabled-icon"></i>
+                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
+                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
+                    <i className="fa-solid fa-user-check me-2 enabled-icon" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
+                    <ApproveModal approveData={{ type: "a user", content: "Lorem, ipsum." }} />
                     <i className="fa-solid fa-eye me-2"></i>
                   </div>
                 </td>
@@ -114,9 +133,12 @@ const Users = () => {
                 <td>4</td>
                 <td>Lorem, ipsum.
                   <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2"></i>
-                    <i className="fa-solid fa-trash me-2"></i>
-                    <i className="fa-solid fa-user-large-slash me-2 disabled-icon"></i>
+                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
+                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
+                    <i className="fa-solid fa-user-large-slash me-2 disabled-icon" data-bs-toggle="modal" data-bs-target="#disableModal"></i>
+                    <DisableModal disableData={{ type: "a user", content: "Lorem, ipsum." }} />
                     <i className="fa-solid fa-eye me-2"></i>
                   </div>
                 </td>
@@ -133,9 +155,12 @@ const Users = () => {
                 <td>5</td>
                 <td>Lorem, ipsum.
                   <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2"></i>
-                    <i className="fa-solid fa-trash me-2"></i>
-                    <i className="fa-solid fa-user-large-slash me-2 disabled-icon"></i>
+                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
+                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
+                    <i className="fa-solid fa-user-large-slash me-2 disabled-icon" data-bs-toggle="modal" data-bs-target="#disableModal"></i>
+                    <DisableModal disableData={{ type: "a user", content: "Lorem, ipsum." }} />
                     <i className="fa-solid fa-eye me-2"></i>
                   </div>
                 </td>

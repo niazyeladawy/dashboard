@@ -1,6 +1,6 @@
 import React from 'react'
-import FilterModal from '../../filter modal/FilterModal'
-import ViewOptionModal from '../../vire options modal/ViewOptionModal'
+import FilterModal from '../../Modals/filter modal/FilterModal'
+import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
 import './paticipant.css'
 
 const Participants = () => {

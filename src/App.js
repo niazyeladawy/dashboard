@@ -18,6 +18,7 @@ import Competitions from './components/manage competitions/competitions/Competit
 import CompetitionSessions from './components/manage competitions/competition sessions/CompetitionSessions';
 import Participants from './components/manage competitions/participants/Participants';
 import PendingPartnersCompetitionDate from './components/manage competitions/Pending Partners\' Competition Date/PendingPartnersCompetitionDate';
+import UserPermissions from './components/manage users/user permissions/UserPermissions';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path='administrators' element={<Administrators />} />
             <Route path='country-Partners' element={<CountryPartners />} />
             <Route path='teacher-super-admins' element={<TeacherSuperAdmins />} />
+            <Route path='user-permissions' element={<UserPermissions/>} />
           </Route>
           <Route path='manage-competitions'>
             <Route path='competitions' element={<Competitions />} />

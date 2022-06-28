@@ -1,20 +1,19 @@
 import React from 'react'
-import './ApproveModal.css'
-
-const ApproveModal = ({approveData}) => {
+import './disablemodal.css'
+const DisableModal = ({disableData}) => {
     return (
-        <div className="modal fade" id="approveModal" tabIndex={-1} aria-labelledby="approveModalLabel" aria-hidden="true">
+        <div className="modal fade" id="disableModal" tabIndex={-1} aria-labelledby="disableModalLabel" aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">
                         <div className='modal-header-icon'>
-                            <i class="fa-solid fa-5x text-white fa-check-double"></i>
+                            <i class="fa-solid fa-5x text-white fa-user-large-slash"></i>
                         </div>
                     </div>
                     <div className="modal-body text-center ">
-                        <p className=''>You are about to {approveData.type === "a user" ? "enable":"approve"}   {approveData.type}</p>
-                        <p className='text-main'>{approveData.content}</p>
-                        <p>{approveData.type === "a user" ? "Are you sure?":`approve this will add ${approveData.type} into the database `}<br /> {approveData.type === "a user" ?"":"Are you sure?"}</p>
+                        <p className=''>You are about to disable   {disableData.type}</p>
+                        <p className='text-main'>{disableData.content}</p>
+                        <p className='fs-5'>Are you sure?</p>
                     </div>
                     <div className="modal-footer d-flex justify-content-evenly">
                         <button type="button" className="btn bg-white px-5" data-bs-dismiss="modal">Cancel</button>
@@ -26,4 +25,4 @@ const ApproveModal = ({approveData}) => {
     )
 }
 
-export default ApproveModal
+export default DisableModal

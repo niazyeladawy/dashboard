@@ -1,5 +1,5 @@
 import React from 'react'
-import DeleteModal from '../../delete modal/DeleteModal'
+import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import './organisation.css'
 
 const Organisations = () => {
