@@ -92,6 +92,14 @@ const Sidebar = () => {
                                     Organisations
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/setup/domainstags"}>
+                                    Domains and Tags
+                                </NavLink>
+                            </li>
+                            
                         </ul>
                     </div>
                 </li>

@@ -1,12 +1,12 @@
-#editModal .modal-dialog{
+#editModal2 .modal-dialog{
     height: 100vh;
     margin: 0;
 }
-#editModal form .item{
-   width: 44%;
+#editModal2 form .item{
+   width: auto
     
 }
-#editModal .modal-content {
+#editModal2 .modal-content {
     
     width: 60%;
     left: 50%;
@@ -14,29 +14,29 @@
     transform: translate(-50%,-50%);
     
 }
-#editModal .modal-header{
+#editModal2 .modal-header{
     position: relative;
     border-bottom: 0;
 }
 
-#editModal .modal-header-icon i::after{
+#editModal2 .modal-header-icon i::after{
     display: none;
 }
-#editModal .modal-body p{
+#editModal2 .modal-body p{
     font-size: 20px;
 }
-#editModal .modal-body p:first-of-type{
+#editModal2 .modal-body p:first-of-type{
     font-weight: 600;
 }
-#editModal .modal-footer{
+#editModal2 .modal-footer{
     border-top: 0;
     background-color: #EFEEEF;
 }
-#editModal .btn-confirm{
+#editModal2 .btn-confirm{
     background-color: var(--main-color);
     color: #fff;
 }
-#editModal textarea{
+#editModal2 textarea{
     width: 80%;
     margin-top: 7px;
     background-color: #F2F2F2;
@@ -44,7 +44,7 @@
     border-radius: 10px;
     padding: 10px;
 }
-#editModal .btn-close{
+#editModal2 .btn-close{
     position: absolute;
     
     right: 50px;

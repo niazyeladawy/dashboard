@@ -19,6 +19,7 @@ import CompetitionSessions from './components/manage competitions/competition se
 import Participants from './components/manage competitions/participants/Participants';
 import PendingPartnersCompetitionDate from './components/manage competitions/Pending Partners\' Competition Date/PendingPartnersCompetitionDate';
 import UserPermissions from './components/manage users/user permissions/UserPermissions';
+import DomainsTags from './components/Setup/Domains and tags/DomainsTags';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path='awards' element={<Awards />} />
             <Route path='organisations' element={<Organisations />} />
             <Route path='schools' element={<Schools />} />
+            <Route path='domainstags' element={<DomainsTags />} />
           </Route>
           <Route path='settings'>
             <Route path='profile' element={<Profile />} />

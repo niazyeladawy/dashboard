@@ -1,4 +1,7 @@
 import React from 'react'
+import AddModal2 from '../../Modals/add modal 2/AddModal2'
+import DeleteModal from '../../Modals/delete modal/DeleteModal'
+import EditModal2 from '../../Modals/edit modal 2/EditModal2'
 import FilterModal from '../../Modals/filter modal/FilterModal'
 import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
 import './paticipant.css'
@@ -46,7 +49,8 @@ const Participants = () => {
 
                 <div className='d-flex justify-content-between mt-2 align-items-center'>
                     <div className='d-flex'>
-                        <button className='add-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-plus'></i> Add New Participant</button>
+                        <button className='add-btn shadow-sm py-1 px-3 me-3'  data-bs-toggle="modal" data-bs-target="#addModal2"><i className='fas fa-plus'></i> Add New Participant</button>
+                        <AddModal2 addData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre"] }} />
                         <button className='add-btn shadow-sm py-1 px-3 me-3'><i className="fa-solid fa-arrow-right-arrow-left"></i> Swap Index</button>
                         <button className='add-btn shadow-sm py-1 px-3 me-3'><i className='fa-solid fa-file-export'></i> Export CSV</button>
                         <button className='add-btn shadow-sm py-1 px-3 me-3'><i className='fa-solid fa-file-import'></i> Import CSV</button>
@@ -86,8 +90,10 @@ const Participants = () => {
                                     <td>1</td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='participant__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i className="fa-solid fa-trash me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2"  data-bs-toggle="modal" data-bs-target="#editModal2"></i>
+                                            <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
                                             <i class="fa-solid fa-copy  me-2"></i>
                                             <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
@@ -111,8 +117,10 @@ const Participants = () => {
                                     <td>1</td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='participant__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i className="fa-solid fa-trash me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2"  data-bs-toggle="modal" data-bs-target="#editModal2"></i>
+                                            <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
                                             <i class="fa-solid fa-copy  me-2"></i>
                                             <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
@@ -136,8 +144,10 @@ const Participants = () => {
                                     <td>1</td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='participant__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i className="fa-solid fa-trash me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2"  data-bs-toggle="modal" data-bs-target="#editModal2"></i>
+                                            <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
                                             <i class="fa-solid fa-copy  me-2"></i>
                                             <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
@@ -155,14 +165,16 @@ const Participants = () => {
                                     <td className=''>kelly</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn absent'>Absent</span></td>
+                                    <td className=''><span className='status-btn active-btn'>Active</span></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='participant__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i className="fa-solid fa-trash me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2"  data-bs-toggle="modal" data-bs-target="#editModal2"></i>
+                                            <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
                                             <i class="fa-solid fa-copy  me-2"></i>
                                             <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
@@ -180,14 +192,16 @@ const Participants = () => {
                                     <td className=''>kelly</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn computed'>Computed</span></td>
+                                    <td className=''><span className='status-btn active-btn'>Active</span></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='participant__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2"></i>
-                                            <i className="fa-solid fa-trash me-2"></i>
+                                            <i className="fa-solid fa-pen-to-square me-2"  data-bs-toggle="modal" data-bs-target="#editModal2"></i>
+                                            <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
                                             <i class="fa-solid fa-copy  me-2"></i>
                                             <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
@@ -205,7 +219,7 @@ const Participants = () => {
                                     <td className=''>kelly</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn computed'>Computed</span></td>
+                                    <td className=''><span className='status-btn active-btn'>Active</span></td>
                                 </tr>
                             </tbody>
                         </table>
