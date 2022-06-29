@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: 'Nunito', sans-serif !important; 
+  font-family: 'Nunito', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -49,58 +49,78 @@ code {
 .delete-btn {
   background-color: #F3797E;
 }
-.approve-btn{
+
+.approve-btn {
   background-color: #A9ABD3;
 }
 
 
-.add-btn,.approve-btn,  
+.add-btn,
+.approve-btn,
 .delete-btn {
   color: #fff;
   border: 0;
   border-radius: 5px;
 }
-.input-transparent{
+
+.input-transparent {
   background-color: transparent;
   border: none;
   outline: none;
 }
-.border-b-main{
+
+.border-b-main {
   border-bottom: 2px solid var(--main-color);
 }
 
-thead{
+thead {
   border-radius: 50px;
   color: #fff;
 }
+
 table {
   white-space: nowrap;
   font-family: 'Nunito', sans-serif;
   border-radius: 10px;
   overflow: hidden;
 }
-tbody{
+
+tbody {
   background-color: #F8F8FD;
 }
+
 td {
   padding: 10px 20px;
 }
 
-.option-dropdown{
+.option-dropdown {
   background-color: #A9ABD3 !important;
   color: #fff !important;
 }
-.my-big{
+
+.my-big {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
-.options{
+
+.options {
   margin-bottom: 30px;
 }
-h2{
+
+h2 {
   font-family: 'Nunito', sans-serif;
 }
-.overflow-hidden h2{
+
+.overflow-hidden h2 {
   font-weight: bold;
   margin-bottom: 16px !important;
+}
+
+.btn-cancel{
+  color: #fff !important;
+  background-color: #848484 !important;
+}
+.btn-submit{
+  color: #fff !important;
+  background-color: var(--main-color) !important;
 }

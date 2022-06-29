@@ -95,7 +95,9 @@ const Users = () => {
                     <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
                     <i className="fa-solid fa-user-check me-2 enabled-icon" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
                     <ApproveModal approveData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <i className="fa-solid fa-eye me-2"></i>
+                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                      <i className="fa-solid fa-eye me-2"></i>
+                    </Link>
                   </div>
                 </td>
                 <td>Lorem.</td>
@@ -117,7 +119,9 @@ const Users = () => {
                     <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
                     <i className="fa-solid fa-user-check me-2 enabled-icon" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
                     <ApproveModal approveData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <i className="fa-solid fa-eye me-2"></i>
+                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                      <i className="fa-solid fa-eye me-2"></i>
+                    </Link> 
                   </div>
                 </td>
                 <td>Lorem.</td>
@@ -139,7 +143,9 @@ const Users = () => {
                     <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
                     <i className="fa-solid fa-user-large-slash me-2 disabled-icon" data-bs-toggle="modal" data-bs-target="#disableModal"></i>
                     <DisableModal disableData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <i className="fa-solid fa-eye me-2"></i>
+                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                      <i className="fa-solid fa-eye me-2"></i>
+                    </Link> 
                   </div>
                 </td>
                 <td>Lorem.</td>
@@ -161,7 +167,9 @@ const Users = () => {
                     <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
                     <i className="fa-solid fa-user-large-slash me-2 disabled-icon" data-bs-toggle="modal" data-bs-target="#disableModal"></i>
                     <DisableModal disableData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <i className="fa-solid fa-eye me-2"></i>
+                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                      <i className="fa-solid fa-eye me-2"></i>
+                    </Link> 
                   </div>
                 </td>
                 <td>Lorem.</td>
