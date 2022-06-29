@@ -99,7 +99,13 @@ const Sidebar = () => {
                                     Domains and Tags
                                 </NavLink>
                             </li>
-                            
+                            <li>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/setup/difficulty-groups"}>
+                                    Difficulty Groups
+                                </NavLink>
+                            </li>d
                         </ul>
                     </div>
                 </li>
