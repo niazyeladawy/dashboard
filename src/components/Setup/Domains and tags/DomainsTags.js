@@ -86,6 +86,40 @@ const DomainsTags = () => {
                                             <EditModal editData={{ type: "domain", content: ["Domain Name"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Domain", content: "Lorem, ipsum." }} />
+                                           
+                                        </div>
+                                    </td>
+                                    <td>Lorem.</td>
+                                    <td>Lorem, ipsum.</td>
+                                    <td className=''>kelly(2020/05/5 13:00)</td>
+                                    <td className=''>kelly(2020/05/5 13:00)</td>
+                                    <td className=''><span className='status-btn approved'>Approved</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td className='approved_icons'>Lorem, ipsum.
+                                        <div className='domains__icons'>
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                            <EditModal editData={{ type: "domain", content: ["Domain Name"] }} />
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{ type: "a Domain", content: "Lorem, ipsum." }} />
+                                           
+                                        </div>
+                                    </td>
+                                    <td>Lorem.</td>
+                                    <td>Lorem, ipsum.</td>
+                                    <td className=''>kelly(2020/05/5 13:00)</td>
+                                    <td className=''>kelly(2020/05/5 13:00)</td>
+                                    <td className=''><span className='status-btn approved'>Approved</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td className='approved_icons'>Lorem, ipsum.
+                                        <div className='domains__icons'>
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                            <EditModal editData={{ type: "domain", content: ["Domain Name"] }} />
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{ type: "a Domain", content: "Lorem, ipsum." }} />
                                             <i className='fas fa-check me-2' data-bs-toggle="modal" data-bs-target="#approveModal"></i>
                                             <ApproveModal approveData={{ type: "a domain", content: "Lorem, ipsum." }} />
                                         </div>
@@ -94,7 +128,25 @@ const DomainsTags = () => {
                                     <td>Lorem, ipsum.</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
                                     <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn approved'>Approved</span></td>
+                                    <td className=''><span className='status-btn pending'>Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td className='approved_icons'>Lorem, ipsum.
+                                        <div className='domains__icons'>
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                            <EditModal editData={{ type: "domain", content: ["Domain Name"] }} />
+                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                            <DeleteModal deleteData={{ type: "a Domain", content: "Lorem, ipsum." }} />
+                                            <i className='fas fa-check me-2' data-bs-toggle="modal" data-bs-target="#approveModal"></i>
+                                            <ApproveModal approveData={{ type: "a domain", content: "Lorem, ipsum." }} />
+                                        </div>
+                                    </td>
+                                    <td>Lorem.</td>
+                                    <td>Lorem, ipsum.</td>
+                                    <td className=''>kelly(2020/05/5 13:00)</td>
+                                    <td className=''>kelly(2020/05/5 13:00)</td>
+                                    <td className=''><span className='status-btn pending'>Pending</span></td>
                                 </tr>
                             </tbody>
                         </table>
