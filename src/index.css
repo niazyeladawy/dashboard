@@ -130,8 +130,15 @@ h2 {
 form label {
   font-size: 20px;
 }
-form input {
+form input:not([type="file"]) {
   background-color: #F2F2F2 !important;
   padding: 10px  !important;
   border: none !important;
+}
+.modal-content{
+  border-radius: 10px !important;
+}
+.react-tabs__tab-list{
+  margin-bottom: 0 !important;
+  border-bottom: none !important;
 }
