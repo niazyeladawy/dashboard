@@ -130,7 +130,7 @@ h2 {
 form label {
   font-size: 20px;
 }
-form input:not([type="file"]) {
+form input[type=text],form input[type=password],form input[type=email] {
   background-color: #F2F2F2 !important;
   padding: 10px  !important;
   border: none !important;

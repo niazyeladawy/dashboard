@@ -75,8 +75,6 @@ const Users = () => {
                     <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
                       <i className="fa-solid fa-eye me-2"></i>
                     </Link>
-
-
                   </div>
                 </td>
                 <td>Lorem.</td>

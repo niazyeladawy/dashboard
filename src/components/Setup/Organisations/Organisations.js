@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import AddOrgModal from '../../Modals/add org modal/AddOrgModal'
 
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
@@ -137,7 +138,9 @@ const Organisations = () => {
                                         <EditOrgModal />
                                         <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                         <DeleteModal deleteData={{ type: "an organisation", content: "Lorem, ipsum." }} />
-                                        <i className="fa-solid fa-eye me-2"></i>
+                                        <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                                            <i className="fa-solid fa-eye me-2"></i>
+                                        </Link>
                                     </div>
                                 </td>
                                 <td>Lorem.</td>
@@ -160,7 +163,9 @@ const Organisations = () => {
                                         <EditOrgModal />
                                         <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                         <DeleteModal deleteData={{ type: "an organisation", content: "Lorem, ipsum." }} />
-                                        <i className="fa-solid fa-eye me-2"></i>
+                                        <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                                            <i className="fa-solid fa-eye me-2"></i>
+                                        </Link>
                                     </div>
                                 </td>
                                 <td>Lorem.</td>
@@ -183,7 +188,9 @@ const Organisations = () => {
                                         <EditOrgModal />
                                         <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                         <DeleteModal deleteData={{ type: "an organisation", content: "Lorem, ipsum." }} />
-                                        <i className="fa-solid fa-eye me-2"></i>
+                                        <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                                            <i className="fa-solid fa-eye me-2"></i>
+                                        </Link>
                                     </div>
                                 </td>
                                 <td>Lorem.</td>
@@ -206,7 +213,9 @@ const Organisations = () => {
                                         <EditOrgModal />
                                         <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                         <DeleteModal deleteData={{ type: "an organisation", content: "Lorem, ipsum." }} />
-                                        <i className="fa-solid fa-eye me-2"></i>
+                                        <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                                            <i className="fa-solid fa-eye me-2"></i>
+                                        </Link>
                                     </div>
                                 </td>
                                 <td>Lorem.</td>
