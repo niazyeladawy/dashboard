@@ -1,4 +1,6 @@
 import React from 'react'
+import AddOrgModal from '../../Modals/add org modal/AddOrgModal'
+
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import './organisation.css'
 
@@ -11,7 +13,7 @@ const Organisations = () => {
                 <button className="btn  dropdown-toggle option-dropdown ms-2" type="button" data-bs-toggle="modal" data-bs-target="#viewOptionsModal" >
                     View Options
                 </button>
-                <button class="btn dropdown-toggle ms-2 option-dropdown" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
+                <button className="btn dropdown-toggle ms-2 option-dropdown" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
                     Filter
                 </button>
                 <div className="modal fade" id="viewOptionsModal" tabIndex={-1} aria-labelledby="viewOptionsModalLabel" aria-hidden="true">
@@ -84,7 +86,7 @@ const Organisations = () => {
                                             </select>
                                         </div>
                                     </div>
-                                    <button type='submit' className='approve-btn p-2 px-3 rounded-3'><i class="fa-solid fa-arrow-rotate-right me-3"></i> Reset Filters</button>
+                                    <button type='submit' className='approve-btn p-2 px-3 rounded-3'><i className="fa-solid fa-arrow-rotate-right me-3"></i> Reset Filters</button>
                                 </form>
                             </div>
 
@@ -92,11 +94,13 @@ const Organisations = () => {
                     </div>
                 </div>
 
+        <AddOrgModal/>
             </div>
             <div className='d-flex justify-content-between mt-2 align-items-center'>
                 <div className='d-flex'>
-                    <button className='add-btn shadow-sm py-1 px-3'><i className='fas fa-plus'></i> Add New Organization</button>
+                    <button className='add-btn shadow-sm py-1 px-3' data-bs-toggle="modal" data-bs-target="#addOrgModal"><i className='fas fa-plus'></i> Add New Organization</button>
                     <button className='delete-btn shadow-sm py-1 px-3 ms-3'><i className='fas fa-trash'></i> Mass Delete</button>
+                    
                 </div>
                 <div className='border-b-main'>
                     <i className='fas fa-magnifying-glass text-main'></i>

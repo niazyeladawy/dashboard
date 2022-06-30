@@ -51,16 +51,18 @@ code {
 }
 
 .approve-btn {
-  background-color: #A9ABD3;
+  background-color: #A9ABD3 !important;
+  
 }
 
 
 .add-btn,
 .approve-btn,
 .delete-btn {
-  color: #fff;
-  border: 0;
-  border-radius: 5px;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 5px !important;
+  height: fit-content !important;
 }
 
 .input-transparent {
@@ -123,4 +125,13 @@ h2 {
 .btn-submit{
   color: #fff !important;
   background-color: var(--main-color) !important;
+}
+
+form label {
+  font-size: 20px;
+}
+form input {
+  background-color: #F2F2F2 !important;
+  padding: 10px  !important;
+  border: none !important;
 }
