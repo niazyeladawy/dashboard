@@ -7,7 +7,7 @@ const DisableModal = ({disableData}) => {
                 <div className="modal-content">
                     <div className="modal-header">
                         <div className='modal-header-icon'>
-                            <i class="fa-solid fa-5x text-white fa-user-large-slash"></i>
+                            <i className="fa-solid fa-5x text-white fa-user-large-slash"></i>
                         </div>
                     </div>
                     <div className="modal-body text-center ">

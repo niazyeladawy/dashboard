@@ -11,7 +11,7 @@ const DeleteModal = ({deleteData}) => {
                 <div className="modal-content">
                     <div className="modal-header">
                         <div className='modal-header-icon'>
-                            <i class="fa-solid fa-5x text-white fa-trash-can"></i>
+                            <i className="fa-solid fa-5x text-white fa-trash-can"></i>
                         </div>
                     </div>
                     <div className="modal-body text-center ">

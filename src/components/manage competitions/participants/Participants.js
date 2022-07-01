@@ -14,12 +14,12 @@ const Participants = () => {
                 <div className='d-flex justify-content-between align-items-center mb-3'>
                     <div className='status d-flex'>
                         <div className='pending-item rounded-3 shadow px-4 py-2 bg-white text-center me-3'>
-                            <i class="fa-solid fa-chart-simple fa-2x"></i>
+                            <i className="fa-solid fa-chart-simple fa-2x"></i>
                             <span className='d-block fs-4 fw-bold'>  SASMO 2022</span>
                             <p className='mb-0'>Competition</p>
                         </div>
                         <div className='total-item rounded-3 shadow px-4 py-2 bg-white text-center me-3'>
-                            <i class="fa-solid fa-user fa-2x"></i>
+                            <i className="fa-solid fa-user fa-2x"></i>
                             <span className='d-block fs-4 fw-bold'> 145</span>
                             <p className='mb-0'>Total Active Participants</p>
                         </div>
@@ -36,7 +36,7 @@ const Participants = () => {
                         <button className="btn  dropdown-toggle option-dropdown ms-2" type="button" data-bs-toggle="modal" data-bs-target="#viewOptionsModal" >
                             View Options
                         </button>
-                        <button class="btn dropdown-toggle ms-2 option-dropdown" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
+                        <button className="btn dropdown-toggle ms-2 option-dropdown" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
                             Filter
                         </button>
                         <ViewOptionModal columns={{
@@ -94,8 +94,8 @@ const Participants = () => {
                                             <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
-                                            <i class="fa-solid fa-copy  me-2"></i>
-                                            <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
+                                            <i className="fa-solid fa-copy  me-2"></i>
+                                            <i className="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
@@ -121,8 +121,8 @@ const Participants = () => {
                                             <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
-                                            <i class="fa-solid fa-copy  me-2"></i>
-                                            <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
+                                            <i className="fa-solid fa-copy  me-2"></i>
+                                            <i className="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
@@ -148,8 +148,8 @@ const Participants = () => {
                                             <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
-                                            <i class="fa-solid fa-copy  me-2"></i>
-                                            <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
+                                            <i className="fa-solid fa-copy  me-2"></i>
+                                            <i className="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
@@ -175,8 +175,8 @@ const Participants = () => {
                                             <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
-                                            <i class="fa-solid fa-copy  me-2"></i>
-                                            <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
+                                            <i className="fa-solid fa-copy  me-2"></i>
+                                            <i className="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
@@ -202,8 +202,8 @@ const Participants = () => {
                                             <EditModal2 editData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre","Candidate"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Participant", content: "Lorem, ipsum." }} />
-                                            <i class="fa-solid fa-copy  me-2"></i>
-                                            <i class="fa-solid fa-pen me-2fa-solid fa-pen"></i>
+                                            <i className="fa-solid fa-copy  me-2"></i>
+                                            <i className="fa-solid fa-pen me-2fa-solid fa-pen"></i>
                                         </div>
                                     </td>
                                     <td>Lorem.</td>

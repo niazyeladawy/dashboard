@@ -14,10 +14,10 @@ const Profile = () => {
                             <img src={profileimg} className="profile__img" alt="" />
                             <h5 className=' mt-4'>Oraganisation Name <br />@username </h5>
                             <ul className='list-unstyled profile__user__info mt-4'>
-                                <li><i class="fa-solid fa-envelope fa-fw"></i> ben@gmail.com</li>
-                                <li><i class="fa-solid fa-graduation-cap fa-fw"></i> Elsalam School</li>
-                                <li><i class="fa-solid fa-map fa-fw"></i> Cairo, Egypt</li>
-                                <li><i class="fa-solid fa-calendar-days fa-fw"></i>   User Since march 2021 </li>
+                                <li><i className="fa-solid fa-envelope fa-fw"></i> ben@gmail.com</li>
+                                <li><i className="fa-solid fa-graduation-cap fa-fw"></i> Elsalam School</li>
+                                <li><i className="fa-solid fa-map fa-fw"></i> Cairo, Egypt</li>
+                                <li><i className="fa-solid fa-calendar-days fa-fw"></i>   User Since march 2021 </li>
                             </ul>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ const Profile = () => {
                                 </div>
                             </div>
                             <div className='d-flex justify-content-end mb-5'>
-                                <button className='delete-btn shadow-sm py-2 px-3 '><i class="fa-solid fa-pen"></i> Edit porfile</button>
+                                <button className='delete-btn shadow-sm py-2 px-3 '><i className="fa-solid fa-pen"></i> Edit porfile</button>
                             </div>
 
                         </div>

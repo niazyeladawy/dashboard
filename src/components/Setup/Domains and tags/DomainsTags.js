@@ -18,7 +18,7 @@ const DomainsTags = () => {
                         <button className="btn  dropdown-toggle option-dropdown ms-2" type="button" data-bs-toggle="modal" data-bs-target="#viewOptionsModal" >
                             View Options
                         </button>
-                        <button class="btn dropdown-toggle ms-2 option-dropdown" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
+                        <button className="btn dropdown-toggle ms-2 option-dropdown" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
                             Filter
                         </button>
 
@@ -37,7 +37,7 @@ const DomainsTags = () => {
                     <div className='d-flex'>
                         <button className='add-btn shadow-sm py-1 px-3 me-3' data-bs-toggle="modal" data-bs-target="#addModal"><i className='fas fa-plus'></i>Add New Domain/Tag</button>
                         <AddModal addData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
-                        <button className='approve-btn shadow-sm py-1 px-3 me-3'><i class="fa-solid fa-check"></i> Mass Approve</button>
+                        <button className='approve-btn shadow-sm py-1 px-3 me-3'><i className="fa-solid fa-check"></i> Mass Approve</button>
                         <button className='delete-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-trash'></i> Mass Delete</button>
                     </div>
                     <div className='border-b-main'>

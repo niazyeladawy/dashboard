@@ -9,7 +9,7 @@ const AddParticipatnModal = () => {
                 <div className="modal-content px-5">
                     <div className="modal-header d-block">
                         <h5 className='text-center'>Add Participant </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <Tabs>
                         <TabList>
