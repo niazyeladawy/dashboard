@@ -1,5 +1,6 @@
 import React from 'react'
 import AddModal from '../../Modals/add modal/AddModal'
+import AddParticipatnModal from '../../Modals/add participant modal/AddParticipatnModal'
 import ApproveModal from '../../Modals/approvemodal/ApproveModal'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import EditModal from '../../Modals/edit modal/EditModal'
@@ -40,8 +41,8 @@ const Schools = () => {
                             content: ["Address", "Phone Number", "Submitted By", "Approved By", "Rejected By", "Last Modified By", "Status "]
                         }} />
 
-                       <FilterModal filterby={[{ name: "School/Tuition", content: ["School", "Tuition"] }, { name: "Country", content: ["Egypt", "China", "USA"] }, { name: "Status", content: ["Disabled", "Enabled"] }]} />
-                        
+                        <FilterModal filterby={[{ name: "School/Tuition", content: ["School", "Tuition"] }, { name: "Country", content: ["Egypt", "China", "USA"] }, { name: "Status", content: ["Disabled", "Enabled"] }]} />
+
 
                     </div>
                 </div>
@@ -89,7 +90,8 @@ const Schools = () => {
                                             <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a school", content: "Lorem, ipsum." }} />
-                                            <i class="fa-solid fa-user-plus"></i>
+                                            <i class="fa-solid fa-user-plus" data-bs-toggle="modal" data-bs-target="#addOrgParticipant"></i>
+                                            <AddParticipatnModal />
                                             <i class="fa-solid fa-user-ninja"></i>
                                         </div>
                                     </td>
