@@ -30,11 +30,13 @@ function App() {
 
         <Route path='dashboard' element={<ProtectRoute><Dashboard /></ProtectRoute>} >
           <Route path='setup'>
+            
             <Route path='awards' element={<Awards />} />
             <Route path='organisations' element={<Organisations />} />
             <Route path='schools' element={<Schools />} />
             <Route path='domainstags' element={<DomainsTags />} />
             <Route path='difficulty-groups' element={<DifficultyGroups />} />
+            <Route path="/dashboard/setup" element={<Navigate replace to="/dashboard/setup/awards" />} />
           </Route>
           <Route path='settings'>
             <Route path='profile' element={<Profile />} />
@@ -44,13 +46,13 @@ function App() {
             <Route path='administrators' element={<Administrators />} />
             <Route path='country-Partners' element={<CountryPartners />} />
             <Route path='teacher-super-admins' element={<TeacherSuperAdmins />} />
-            <Route path='user-permissions' element={<UserPermissions/>} />
+            <Route path='user-permissions' element={<UserPermissions />} />
           </Route>
           <Route path='manage-competitions'>
             <Route path='competitions' element={<Competitions />} />
             <Route path='competition-sessions' element={<CompetitionSessions />} />
             <Route path='participants' element={<Participants />} />
-            <Route path='pending-partners-competition-date' element={<PendingPartnersCompetitionDate/>} />
+            <Route path='pending-partners-competition-date' element={<PendingPartnersCompetitionDate />} />
           </Route>
         </Route>
 
