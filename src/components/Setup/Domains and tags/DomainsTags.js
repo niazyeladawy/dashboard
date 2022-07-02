@@ -1,4 +1,5 @@
 import React from 'react'
+import AddDomainModal from '../../Modals/add domain modal/AddDomainModal'
 import AddModal from '../../Modals/add modal/AddModal'
 import ApproveModal from '../../Modals/approvemodal/ApproveModal'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
@@ -35,14 +36,14 @@ const DomainsTags = () => {
 
                 <div className='d-flex justify-content-between mt-2 align-items-center'>
                     <div className='d-flex'>
-                        <button className='add-btn shadow-sm py-1 px-3 me-3' data-bs-toggle="modal" data-bs-target="#addModal"><i className='fas fa-plus'></i>Add New Domain/Tag</button>
-                        <AddModal addData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
+                        <button className='add-btn shadow-sm py-1 px-3 me-3' data-bs-toggle="modal" data-bs-target="#addDomainModal"><i className='fas fa-plus'></i>Add New Domain/Tag</button>
+                        <AddDomainModal />
                         <button className='approve-btn shadow-sm py-1 px-3 me-3'><i className="fa-solid fa-check"></i> Mass Approve</button>
                         <button className='delete-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-trash'></i> Mass Delete</button>
                     </div>
                     <div className='border-b-main'>
                         <i className='fas fa-magnifying-glass text-main'></i>
-                        <input className='input-transparent px-5 ' type="text" placeholder='Search for Schools' />
+                        <input className='input-transparent px-5 ' type="text" placeholder='Search for Domain and tags...' />
                     </div>
                 </div>
                 <div className='mt-3 position-relative'>

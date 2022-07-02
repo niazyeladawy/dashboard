@@ -39,3 +39,10 @@
 .domain form .item{
    width: 100% !important; 
 }
+.domain #editModal form>div{
+    box-shadow: none !important;
+}
+
+.domain #editModal .modal-content{
+    width: 40%;
+}
