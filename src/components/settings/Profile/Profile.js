@@ -1,6 +1,8 @@
 import React from 'react'
 import './profile.css'
 import profileimg from '../../../assets/images/pp.jpg';
+import EditProfile from '../../Modals/edit profile/EditProfile';
+import ChangePasswordModal from '../../Modals/change password  modal/ChangePasswordModal';
 
 const Profile = () => {
     return (
@@ -33,13 +35,17 @@ const Profile = () => {
                                 </div>
                             </div>
                             <div className='d-flex justify-content-end mb-5'>
-                                <button className='delete-btn shadow-sm py-2 px-3 '><i className="fa-solid fa-pen"></i> Edit porfile</button>
+                                <button className='delete-btn shadow-sm py-2 px-3 ' data-bs-toggle="modal" data-bs-target="#editProfileModal"><i className="fa-solid fa-pen"></i> Edit porfile</button>
+
+                                <EditProfile />
                             </div>
 
                         </div>
                     </div>
                 </div>
             </div>
+            
+
         </div>
     )
 }

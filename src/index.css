@@ -54,11 +54,15 @@ code {
   background-color: #A9ABD3 !important;
   
 }
-
+.btn-cancel{
+  color: #fff !important;
+  background-color: #848484 !important;
+}
 
 .add-btn,
 .approve-btn,
-.delete-btn {
+.delete-btn,
+.btn-confirm,.btn-cancel {
   color: #fff !important;
   border: 0 !important;
   border-radius: 5px !important;
@@ -118,10 +122,7 @@ h2 {
   margin-bottom: 16px !important;
 }
 
-.btn-cancel{
-  color: #fff !important;
-  background-color: #848484 !important;
-}
+
 .btn-submit{
   color: #fff !important;
   background-color: var(--main-color) !important;

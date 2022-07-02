@@ -15,16 +15,16 @@ const Navbar = () => {
     }
 
     const getIcon = () => {
-        if(location.pathname.split("/").splice(2,3)[0] === "setup"){
+        if (location.pathname.split("/").splice(2, 3)[0] === "setup") {
             setBreadIcon("fas fa-hammer");
         }
-        else if(location.pathname.split("/").splice(2,3)[0] === "settings"){
+        else if (location.pathname.split("/").splice(2, 3)[0] === "settings") {
             setBreadIcon("fas fa-gear");
         }
-        else if(location.pathname.split("/").splice(2,3)[0] === "manage-users"){
+        else if (location.pathname.split("/").splice(2, 3)[0] === "manage-users") {
             setBreadIcon("fa-user-group");
         }
-        else if(location.pathname.split("/").splice(2,3)[0] === "manage-competitions"){
+        else if (location.pathname.split("/").splice(2, 3)[0] === "manage-competitions") {
             setBreadIcon("fa-newspaper");
         }
     }
@@ -36,12 +36,15 @@ const Navbar = () => {
 
     return (
         <nav className='bg-sec main_nav py-3'>
-            <div className='ms-3 d-flex align-items-center'>
-                <NavLink to={`/dashboard/${bread && bread[0]}`}>
-                    <i className={`fa-solid ${breadIcon && breadIcon}`}></i> {bread && bread[0]}
-                </NavLink>
-                <span> <i className='fas fa-greater-than mx-3'></i>{bread && bread[1]}</span>
-            </div>
+            {
+                bread?.length ===0?"" : (  <div className='ms-3 d-flex align-items-center'>
+                    <NavLink to={`/dashboard/${bread && bread[0]}`}>
+                        <i className={`fa-solid ${breadIcon && breadIcon}`}></i> {bread && bread[0]}
+                    </NavLink>
+                    <span> <i className='fas fa-greater-than mx-3'></i>{bread && bread[1]}</span>
+                </div>)
+            }
+
         </nav>
     )
 }
