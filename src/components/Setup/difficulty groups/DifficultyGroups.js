@@ -1,6 +1,8 @@
 import React from 'react'
+import AddDifficultyGroupsmodal from '../../Modals/add defficulty groups/AddDifficultyGroupsmodal'
 import AddModal from '../../Modals/add modal/AddModal'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
+import EditDifficultyGroups from '../../Modals/ecit DifficultyGroups/EditDifficultyGroups'
 import EditModal from '../../Modals/edit modal/EditModal'
 import FilterModal from '../../Modals/filter modal/FilterModal'
 import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
@@ -22,10 +24,10 @@ const DifficultyGroups = () => {
 
                         <ViewOptionModal columns={{
                             name: "Columns",
-                            content: [ "Created By", "Approved By", "Status"]
+                            content: ["Created By", "Approved By", "Status"]
                         }} />
 
-                        <FilterModal filterby={[ { name: "Status", content: ["Approved", "Pending"] }]} />
+                        <FilterModal filterby={[{ name: "Status", content: ["Approved", "Pending"] }]} />
 
 
                     </div>
@@ -33,10 +35,11 @@ const DifficultyGroups = () => {
 
                 <div className='d-flex justify-content-between mt-2 align-items-center'>
                     <div className='d-flex'>
-                        <button className='add-btn shadow-sm py-1 px-3 me-3' data-bs-toggle="modal" data-bs-target="#addModal"><i className='fas fa-plus me-2'></i>Add New Competition</button>
+                        <button className='add-btn shadow-sm py-1 px-3 me-3' data-bs-toggle="modal" data-bs-target="#addDiffModal"><i className='fas fa-plus me-2'></i>Add New Difficulty Group</button>
                         <AddModal addData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
 
                         <button className='delete-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-trash'></i> Mass Delete</button>
+                        <AddDifficultyGroupsmodal />
                     </div>
                     <div className='border-b-main'>
                         <i className='fas fa-magnifying-glass text-main'></i>
@@ -61,85 +64,85 @@ const DifficultyGroups = () => {
                                     <td>1</td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "Difficulty Group", content: ["Difficulty"] }} />
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>
+                                            <EditDifficultyGroups />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Difficulty Group", content: "Lorem, ipsum." }} />
-                                            
+
                                         </div>
                                     </td>
                                     <td>3</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
-                                    
+
                                     <td className=''><span className='status-btn active-btn'>Active</span></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "Difficulty Group", content: ["Difficulty"] }} />
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>
+                                            <EditDifficultyGroups />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Difficulty Group", content: "Lorem, ipsum." }} />
-                                            
+
                                         </div>
                                     </td>
                                     <td>3</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
-                                    
+
                                     <td className=''><span className='status-btn active-btn'>Active</span></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "Difficulty Group", content: ["Difficulty"] }} />
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>
+                                            <EditDifficultyGroups />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Difficulty Group", content: "Lorem, ipsum." }} />
-                                            
+
                                         </div>
                                     </td>
                                     <td>3</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
-                                    
+
                                     <td className=''><span className='status-btn active-btn'>Active</span></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "Difficulty Group", content: ["Difficulty"] }} />
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>
+                                            <EditDifficultyGroups />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Difficulty Group", content: "Lorem, ipsum." }} />
-                                            
+
                                         </div>
                                     </td>
                                     <td>3</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
-                                    
+
                                     <td className=''><span className='status-btn active-btn'>Active</span></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "Difficulty Group", content: ["Difficulty"] }} />
+                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>
+                                            <EditDifficultyGroups />
                                             <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
                                             <DeleteModal deleteData={{ type: "a Difficulty Group", content: "Lorem, ipsum." }} />
-                                            
+
                                         </div>
                                     </td>
                                     <td>3</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
                                     <td className=''>Admin(020/05/5 13:00)</td>
-                                    
+
                                     <td className=''><span className='status-btn disabled'>Deleted</span></td>
                                 </tr>
 
