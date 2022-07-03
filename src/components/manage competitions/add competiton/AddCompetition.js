@@ -49,15 +49,117 @@ const AddCompetition = () => {
                                                             </div>
                                                             <div className='col-lg-4'>
                                                                 <div className='mb-4'>
-                                                                    <label htmlFor="startDate">Start</label>
-
-
+                                                                    <label htmlFor="CompetitionDate">Competition Date</label>
                                                                 </div>
                                                             </div>
                                                             <div className='col-lg-8'>
                                                                 <div className='mb-4'>
-                                                                    <input id="startDate" className="form-control" type="date" />
+                                                                    <div className='row align-items-center'>
+                                                                        <div className='col-md-4'>
+                                                                            <input id="CompetitionDate" className="form-control" type="date" />
+                                                                        </div>
+                                                                        <div className='col-md-4'>
+                                                                            <p className='text-center mb-0'>To</p>
+                                                                        </div>
+                                                                        <div className='col-md-4'>
+                                                                            <input id="CompetitionEndDate" className="form-control" type="date" />
+                                                                            <button type="button" class="btn btn-sm btn-toggle active" data-toggle="button" aria-pressed="true" autocomplete="off">
+                                                                                <div class="handle"></div>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
 
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-4'>
+                                                                <div className='mb-4'>
+                                                                    <label htmlFor="Re-runofcompetition?">Re-run of competition?</label>
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-8'>
+                                                                <div className='mb-4'>
+                                                                    <div className='row align-items-center'>
+                                                                        <div className='col-md-4'>
+                                                                            <div className="form-check form-switch">
+                                                                                <input className="form-check-input" type="checkbox" id="Re-runofcompetition?" />
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className='col-md-4'>
+                                                                            
+                                                                        </div>
+                                                                        <div className='col-md-4'>
+                                                                            <div className=" ">
+                                                                                <input className="form-control" type="text" id="Re-runofcompetition?" placeholder='Competition Reference' />
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-4'>
+                                                                <div className='mb-4'>
+                                                                    <label htmlFor="CompetitionFormat">Competition Format</label>
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-8'>
+                                                                <div className='mb-4'>
+                                                                    <div className='row align-items-center'>
+                                                                        <div className='col-md-4'>
+                                                                            <div className="form-check form-switch">
+                                                                                <input className="form-check-input" type="checkbox" id="CompetitionFormat" />
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div className='col-lg-4'>
+                                                                <div className='mb-4'>
+                                                                    <label htmlFor="InputTag">Tags</label>
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-8'>
+                                                                <div className='mb-4'>
+                                                                   
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-4'>
+                                                                <div className='mb-4'>
+                                                                    <label htmlFor="DifficultyGroup">Difficulty Group</label>
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-8'>
+                                                                <div className='mb-4'>
+                                                                   
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-4'>
+                                                                <div className='mb-4'>
+                                                                    <label htmlFor="GradesParticipating">Grades Participating</label>
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-8'>
+                                                                <div className='mb-4'>
+                                                                   
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-4'>
+                                                                <div className='mb-4'>
+                                                                    <label htmlFor="CompetitionInstructions">Competition Instructions</label>
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-lg-8'>
+                                                                <div className='mb-4'>
+                                                                   
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
