@@ -145,6 +145,13 @@ const Sidebar = () => {
                                     Teacher Super Admins
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink  style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/manage-users/roles"}>
+                                    Roles
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                 </li>

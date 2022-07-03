@@ -21,6 +21,8 @@ import PendingPartnersCompetitionDate from './components/manage competitions/Pen
 import UserPermissions from './components/manage users/user permissions/UserPermissions';
 import DomainsTags from './components/Setup/Domains and tags/DomainsTags';
 import DifficultyGroups from './components/Setup/difficulty groups/DifficultyGroups';
+import Roles from './components/manage users/Roles/Roles';
+import AddRole from './components/manage users/Roles/Add role/AddRole';
 
 function App() {
   return (
@@ -43,6 +45,8 @@ function App() {
           </Route>
           <Route path='manage-users'>
             <Route path='users' element={<Users />} />
+            <Route path='roles' element={<Roles />} />
+            <Route path='add-role' element={<AddRole />} />
             <Route path='administrators' element={<Administrators />} />
             <Route path='country-Partners' element={<CountryPartners />} />
             <Route path='teacher-super-admins' element={<TeacherSuperAdmins />} />
