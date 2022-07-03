@@ -23,6 +23,7 @@ import DomainsTags from './components/Setup/Domains and tags/DomainsTags';
 import DifficultyGroups from './components/Setup/difficulty groups/DifficultyGroups';
 import Roles from './components/manage users/Roles/Roles';
 import AddRole from './components/manage users/Roles/Add role/AddRole';
+import AddCompetition from './components/manage competitions/add competiton/AddCompetition';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           </Route>
           <Route path='manage-competitions'>
             <Route path='competitions' element={<Competitions />} />
+            <Route path='add-competition' element={<AddCompetition />} />
             <Route path='competition-sessions' element={<CompetitionSessions />} />
             <Route path='participants' element={<Participants />} />
             <Route path='pending-partners-competition-date' element={<PendingPartnersCompetitionDate />} />

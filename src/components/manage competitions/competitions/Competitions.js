@@ -4,11 +4,12 @@ import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import EditModal from '../../Modals/edit modal/EditModal'
 import FilterModal from '../../Modals/filter modal/FilterModal'
 import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
+import { Link} from 'react-router-dom';
 import './competiton.css'
 
 const Competitions = () => {
     return (
-        <div className='schools overflow-hidden w-100 '>
+        <div className=' overflow-hidden w-100 '>
             <div className='flex-grow-1 bg-main-content py-5 px-3 overflow-hidden'>
                 <h2 className='text-main'>Competitions</h2>
                 <div className='d-flex justify-content-end align-items-center mb-3'>
@@ -34,8 +35,8 @@ const Competitions = () => {
 
                 <div className='d-flex justify-content-between mt-2 align-items-center'>
                     <div className='d-flex'>
-                        <button className='add-btn shadow-sm py-1 px-3 me-3' data-bs-toggle="modal" data-bs-target="#addModal"><i className='fas fa-plus me-2'></i>Add New Competition</button>
-                        <AddModal addData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
+                        <Link className='add-btn shadow-sm py-1 px-3 me-3 text-decoration-none' to={'/dashboard/manage-competitions/add-competition'}><i className='fas fa-plus me-2 '></i>Add New Competition</Link>
+                        
 
                         <button className='delete-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-trash'></i> Mass Delete</button>
                     </div>

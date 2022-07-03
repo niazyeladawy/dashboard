@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className='header__content d-flex justify-content-between align-items-center'>
-                <div className='logo'>
+                <div className='logo ms-3'>
                     <img src={logo} alt="" />
                 </div>
                 <div className='right__header d-flex bg-main align-items-center py-1 px-4' >
