@@ -1,5 +1,5 @@
 import React from 'react'
-import AddModal2 from '../../Modals/add modal 2/AddModal2'
+import AddParticipatnModal from '../../Modals/add participant modal/AddParticipatnModal'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import EditModal2 from '../../Modals/edit modal 2/EditModal2'
 import FilterModal from '../../Modals/filter modal/FilterModal'
@@ -49,8 +49,8 @@ const Participants = () => {
 
                 <div className='d-flex justify-content-between mt-2 align-items-center'>
                     <div className='d-flex'>
-                        <button className='add-btn shadow-sm py-1 px-3 me-3'  data-bs-toggle="modal" data-bs-target="#addModal2"><i className='fas fa-plus'></i> Add New Participant</button>
-                        <AddModal2 addData={{ type: "Participant", content: ["Name", "Class", "Competition/Assessment", "Grade", "Country", "School", "Partner/Teacher", "Tuition Centre"] }} />
+                        <button className='add-btn shadow-sm py-1 px-3 me-3'  data-bs-toggle="modal" data-bs-target="#addOrgParticipant"><i className='fas fa-plus'></i> Add New Participant</button>
+                        <AddParticipatnModal  />
                         <button className='add-btn shadow-sm py-1 px-3 me-3'><i className="fa-solid fa-arrow-right-arrow-left"></i> Swap Index</button>
                         <button className='add-btn shadow-sm py-1 px-3 me-3'><i className='fa-solid fa-file-export'></i> Export CSV</button>
                         <button className='add-btn shadow-sm py-1 px-3 me-3'><i className='fa-solid fa-file-import'></i> Import CSV</button>
@@ -59,7 +59,7 @@ const Participants = () => {
                     </div>
                     <div className='border-b-main'>
                         <i className='fas fa-magnifying-glass text-main'></i>
-                        <input className='input-transparent px-5 ' type="text" placeholder='Search for Schools' />
+                        <input className='input-transparent px-5 ' type="text" placeholder='Search for Participant' />
                     </div>
                 </div>
                 <div className='mt-3 position-relative'>

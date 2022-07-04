@@ -3,8 +3,7 @@
     margin: 0;
 }
 #addOrgParticipant form .item{
-   width: 30%
-    
+   margin-bottom: 20px;
 }
 #addOrgParticipant .modal-content {
     
@@ -47,7 +46,7 @@
 #addOrgParticipant .btn-close{
     position: absolute;
     
-    right: 50px;
+    right: 0;
     top: 20px;
 
 }

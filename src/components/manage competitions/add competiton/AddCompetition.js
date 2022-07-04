@@ -82,20 +82,20 @@ const AddCompetition = () => {
                                                                         <div className='col-md-4'>
                                                                             <div className="form-check form-switch">
                                                                                 <input className="form-check-input" type="checkbox" id="Re-runofcompetition?" />
-                                                                                
+
                                                                             </div>
                                                                         </div>
                                                                         <div className='col-md-4'>
-                                                                            
+
                                                                         </div>
                                                                         <div className='col-md-4'>
                                                                             <div className=" ">
                                                                                 <input className="form-control" type="text" id="Re-runofcompetition?" placeholder='Competition Reference' />
-                                                                                
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </div>
                                                             <div className='col-lg-4'>
@@ -109,15 +109,15 @@ const AddCompetition = () => {
                                                                         <div className='col-md-4'>
                                                                             <div className="form-check form-switch">
                                                                                 <input className="form-check-input" type="checkbox" id="CompetitionFormat" />
-                                                                                
+
                                                                             </div>
                                                                         </div>
-                                                                        
+
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </div>
-                                                            
+
                                                             <div className='col-lg-4'>
                                                                 <div className='mb-4'>
                                                                     <label htmlFor="InputTag">Tags</label>
@@ -125,8 +125,8 @@ const AddCompetition = () => {
                                                             </div>
                                                             <div className='col-lg-8'>
                                                                 <div className='mb-4'>
-                                                                   
-                                                                    
+
+
                                                                 </div>
                                                             </div>
                                                             <div className='col-lg-4'>
@@ -136,8 +136,8 @@ const AddCompetition = () => {
                                                             </div>
                                                             <div className='col-lg-8'>
                                                                 <div className='mb-4'>
-                                                                   
-                                                                    
+
+
                                                                 </div>
                                                             </div>
                                                             <div className='col-lg-4'>
@@ -147,8 +147,8 @@ const AddCompetition = () => {
                                                             </div>
                                                             <div className='col-lg-8'>
                                                                 <div className='mb-4'>
-                                                                   
-                                                                    
+
+
                                                                 </div>
                                                             </div>
                                                             <div className='col-lg-4'>
@@ -158,8 +158,8 @@ const AddCompetition = () => {
                                                             </div>
                                                             <div className='col-lg-8'>
                                                                 <div className='mb-4'>
-                                                                   
-                                                                    
+
+
                                                                 </div>
                                                             </div>
                                                         </div>

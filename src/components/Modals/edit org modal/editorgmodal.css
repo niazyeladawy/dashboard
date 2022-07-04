@@ -47,7 +47,7 @@
 #editOrgModal .btn-close{
     position: absolute;
     
-    right: 50px;
+    right: 0;
     top: 20px;
 
 }
