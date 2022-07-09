@@ -34,6 +34,7 @@ code {
   background-color: var(--sec-color);
 }
 
+
 .bg-special {
   background-color: #a5a8cc;
 }
@@ -55,12 +56,15 @@ code {
 
 }
 
+.dublicate-btn{
+  background-color: var(--main-color);
+}
 .btn-cancel {
   color: #fff !important;
   background-color: #848484 !important;
 }
 
-.add-btn,
+.add-btn,.dublicate-btn,
 .approve-btn,
 .delete-btn,
 .btn-confirm,
@@ -124,7 +128,15 @@ h2 {
   margin-bottom: 16px !important;
 }
 
-
+.active-status{
+  color: #6FC9B6;
+}
+.pending-status{
+  color: #707070;
+}
+.locked-status{
+  color: #D96474;
+}
 .btn-submit {
   color: #fff !important;
   background-color: var(--main-color) !important;
