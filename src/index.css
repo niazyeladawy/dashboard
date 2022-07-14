@@ -149,6 +149,7 @@ form label {
 form input[type=text],
 form input[type=password],
 form input[type=email],
+form input[type=number],
 form select {
   background-color: #F2F2F2 !important;
   padding: 10px !important;
@@ -192,7 +193,13 @@ form select {
 /* switch input */
 
 
-
+.toast{
+  display: block !important;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 999999;
+}
 
 
 

@@ -1,12 +1,12 @@
-#addModal .modal-dialog{
+#addSchoolModal .modal-dialog{
     height: 100vh;
     margin: 0;
 }
-#addModal form .item{
+#addSchoolModal form .item{
    width: 44%;
     
 }
-#addModal .modal-content {
+#addSchoolModal .modal-content {
     
     width: 60%;
     left: 50%;
@@ -14,28 +14,28 @@
     transform: translate(-50%,-50%);
     
 }
-#addModal .modal-header{
+#addSchoolModal .modal-header{
     position: relative;
     border-bottom: 0;
 }
-#addModal .modal-header-icon i::after{
+#addSchoolModal .modal-header-icon i::after{
     display: none;
 }
-#addModal .modal-body p{
+#addSchoolModal .modal-body p{
     font-size: 20px;
 }
-#addModal .modal-body p:first-of-type{
+#addSchoolModal .modal-body p:first-of-type{
     font-weight: 600;
 }
-#addModal .modal-footer{
+#addSchoolModal .modal-footer{
     border-top: 0;
     background-color: #EFEEEF;
 }
-#addModal .btn-confirm{
+#addSchoolModal .btn-confirm{
     background-color: var(--main-color);
     color: #fff;
 }
-#addModal textarea{
+#addSchoolModal textarea{
     width: 80%;
     margin-top: 7px;
     background-color: #F2F2F2;
@@ -43,7 +43,7 @@
     border-radius: 10px;
     padding: 10px;
 }
-#addModal .btn-close{
+#addSchoolModal .btn-close{
     position: absolute;
     
     right: 0;

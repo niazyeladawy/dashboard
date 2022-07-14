@@ -1,6 +1,5 @@
 import React from 'react'
 import AddDifficultyGroupsmodal from '../../Modals/add defficulty groups/AddDifficultyGroupsmodal'
-import AddModal from '../../Modals/add modal/AddModal'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import EditDifficultyGroups from '../../Modals/ecit DifficultyGroups/EditDifficultyGroups'
 import EditModal from '../../Modals/edit modal/EditModal'
@@ -36,7 +35,7 @@ const DifficultyGroups = () => {
                 <div className='d-flex justify-content-between mt-2 align-items-center'>
                     <div className='d-flex'>
                         <button className='add-btn shadow-sm py-1 px-3 me-3' data-bs-toggle="modal" data-bs-target="#addDiffModal"><i className='fas fa-plus me-2'></i>Add New Difficulty Group</button>
-                        <AddModal addData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
+                        
 
                         <button className='delete-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-trash'></i> Mass Delete</button>
                         <AddDifficultyGroupsmodal />

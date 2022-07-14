@@ -1,5 +1,4 @@
 import React from 'react'
-import AddModal from '../../Modals/add modal/AddModal'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import EditModal from '../../Modals/edit modal/EditModal'
 import FilterModal from '../../Modals/filter modal/FilterModal'

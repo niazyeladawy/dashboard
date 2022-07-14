@@ -25,51 +25,53 @@ import Roles from './components/manage users/Roles/Roles';
 import AddRole from './components/manage users/Roles/Add role/AddRole';
 import AddCompetition from './components/manage competitions/add competiton/AddCompetition';
 
+
 function App() {
   return (
     <div className="App">
+      
+        <Routes>
 
-      <Routes>
+          <Route path='dashboard' element={<ProtectRoute><Dashboard /></ProtectRoute>} >
+            <Route path='setup'>
+              <Route path='awards' element={<Awards />} />
+              <Route path='organisations' element={<Organisations />} />
+              <Route path='schools' element={<Schools />} />
+              <Route path='domainstags' element={<DomainsTags />} />
+              <Route path='difficulty-groups' element={<DifficultyGroups />} />
+              <Route path="/dashboard/setup" element={<Navigate replace to="/dashboard/setup/awards" />} />
+            </Route>
+            <Route path='settings'>
+              <Route path='profile' element={<Profile />} />
+              <Route path="/dashboard/settings" element={<Navigate replace to="/dashboard/settings/profile" />} />
+            </Route>
+            <Route path='manage-users'>
+              <Route path='users' element={<Users />} />
+              <Route path='roles' element={<Roles />} />
+              <Route path='add-role' element={<AddRole />} />
+              <Route path='administrators' element={<Administrators />} />
+              <Route path='country-Partners' element={<CountryPartners />} />
+              <Route path='teacher-super-admins' element={<TeacherSuperAdmins />} />
+              <Route path='user-permissions' element={<UserPermissions />} />
+              <Route path="/dashboard/manage-users" element={<Navigate replace to="/dashboard/manage-users/users" />} />
+            </Route>
+            <Route path='manage-competitions'>
+              <Route path='competitions' element={<Competitions />} />
+              <Route path='add-competition' element={<AddCompetition />} />
+              <Route path='competition-sessions' element={<CompetitionSessions />} />
+              <Route path='participants' element={<Participants />} />
+              <Route path='pending-partners-competition-date' element={<PendingPartnersCompetitionDate />} />
+              <Route path="/dashboard/manage-competitions" element={<Navigate replace to="/dashboard/manage-competitions/competitions" />} />
+            </Route>
+          </Route>
 
-        <Route path='dashboard' element={<ProtectRoute><Dashboard /></ProtectRoute>} >
-          <Route path='setup'>
-            <Route path='awards' element={<Awards />} />
-            <Route path='organisations' element={<Organisations />} />
-            <Route path='schools' element={<Schools />} />
-            <Route path='domainstags' element={<DomainsTags />} />
-            <Route path='difficulty-groups' element={<DifficultyGroups />} />
-            <Route path="/dashboard/setup" element={<Navigate replace to="/dashboard/setup/awards" />} />
-          </Route>
-          <Route path='settings'>
-            <Route path='profile' element={<Profile />} />
-            <Route path="/dashboard/settings" element={<Navigate replace to="/dashboard/settings/profile" />} />
-          </Route>
-          <Route path='manage-users'>
-            <Route path='users' element={<Users />} />
-            <Route path='roles' element={<Roles />} />
-            <Route path='add-role' element={<AddRole />} />
-            <Route path='administrators' element={<Administrators />} />
-            <Route path='country-Partners' element={<CountryPartners />} />
-            <Route path='teacher-super-admins' element={<TeacherSuperAdmins />} />
-            <Route path='user-permissions' element={<UserPermissions />} />
-            <Route path="/dashboard/manage-users" element={<Navigate replace to="/dashboard/manage-users/users" />} />
-          </Route>
-          <Route path='manage-competitions'>
-            <Route path='competitions' element={<Competitions />} />
-            <Route path='add-competition' element={<AddCompetition />} />
-            <Route path='competition-sessions' element={<CompetitionSessions />} />
-            <Route path='participants' element={<Participants />} />
-            <Route path='pending-partners-competition-date' element={<PendingPartnersCompetitionDate />} />
-            <Route path="/dashboard/manage-competitions" element={<Navigate replace to="/dashboard/manage-competitions/competitions" />} />
-          </Route>
-        </Route>
-
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/forgotpassword' element={<ForgotPassword />} />
-        <Route path='/resetpassword' element={<ResetPassword />} />
-        <Route path="/" element={<Navigate replace to="/dashboard" />} />
-      </Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/forgotpassword' element={<ForgotPassword />} />
+          <Route path='/resetpassword' element={<ResetPassword />} />
+          <Route path="/" element={<Navigate replace to="/dashboard" />} />
+        </Routes>
+      
     </div>
   );
 }

@@ -1,17 +1,38 @@
-import React from 'react'
-import AddModal from '../../Modals/add modal/AddModal'
+import axios from './../../axios/axios'
+import React, { useEffect, useState } from 'react'
 import AddParticipatnModal from '../../Modals/add participant modal/AddParticipatnModal'
 import AddTeacherModal from '../../Modals/add teacher modal/AddTeacherModal'
-import ApproveModal from '../../Modals/approvemodal/ApproveModal'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
-import EditModal from '../../Modals/edit modal/EditModal'
 import FilterModal from '../../Modals/filter modal/FilterModal'
-import RejectModal from '../../Modals/reject modal/RejectModal'
-import RestoreModal from '../../Modals/restore modal/RestoreModal'
 import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
 import './schools.css'
+import AddSchoolModal from '../../Modals/add school modal/AddSchoolModal'
+import UpdateSchoolModal from '../../Modals/update school modal/UpdateSchoolModal'
 
 const Schools = () => {
+    const [deleteId, setdeleteId] = useState(0);
+    const [updateData, setupdateData] = useState({});
+    const [schoolsData, setSchoolsData] = useState([]);
+
+    const getSchoolsData = async () => {
+        let { data } = await axios.get("/api/schools");
+        setSchoolsData(data)
+    }
+
+    useEffect(() => {
+        getSchoolsData();
+
+    }, [])
+
+    const handleDelete = (id) => {
+        setdeleteId(id)
+    }
+
+    const handleUpdate = (item) => {
+        setupdateData({ name: item.name, email: item.email, address: item.address, postal_code: item.postal_code, phone: item.phone, country_id: item.country_id, is_tution_centre: item.is_tution_centre });
+        setdeleteId(item.id)
+    }
+
     return (
         <div className='schools overflow-hidden'>
             <div className='flex-grow-1 bg-main-content py-5 px-3 overflow-hidden'>
@@ -50,8 +71,8 @@ const Schools = () => {
 
                 <div className='d-flex justify-content-between mt-2 align-items-center'>
                     <div className='d-flex'>
-                        <button className='add-btn shadow-sm py-1 px-3 me-3' data-bs-toggle="modal" data-bs-target="#addModal"><i className='fas fa-plus'></i> Add New School</button>
-                        <AddModal addData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
+                        <button className='add-btn shadow-sm py-1 px-3 me-3' data-bs-toggle="modal" data-bs-target="#addSchoolModal"><i className='fas fa-plus'></i> Add New School</button>
+                        <AddSchoolModal getSchoolsData={getSchoolsData} />
                         <button className='approve-btn shadow-sm py-1 px-3 me-3'><i className="fa-solid fa-check"></i> Mass Approve</button>
                         <button className='delete-btn shadow-sm py-1 px-3 me-3'><i className='fas fa-trash'></i> Mass Delete</button>
                     </div>
@@ -83,137 +104,38 @@ const Schools = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td className='approved_icons'>Lorem, ipsum.
-                                        <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
-                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                                            <DeleteModal deleteData={{ type: "a school", content: "Lorem, ipsum." }} />
-                                            <i className="fa-solid fa-user-plus me-2 " data-bs-toggle="modal" data-bs-target="#addOrgParticipant"></i>
-                                            <AddParticipatnModal />
-                                            <i className="fa-solid fa-user-ninja"  data-bs-toggle="modal" data-bs-target="#addTeacherModal"></i>
-                                            <AddTeacherModal/>
-                                        </div>
-                                    </td>
-                                    <td>Lorem.</td>
-                                    <td>Lorem, ipsum.@email.com</td>
-                                    <td>5   </td>
-                                    <td>0103166314</td>
-                                    <td>Lorem ipsum dolor sit.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn approved'>Approved</span></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td className='approved_icons'>Lorem, ipsum.
-                                        <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
-                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                                            <DeleteModal deleteData={{ type: "a school", content: "Lorem, ipsum." }} />
-                                            <i className="fa-solid fa-user-plus me-2 " data-bs-toggle="modal" data-bs-target="#addOrgParticipant"></i>
-                                            <AddParticipatnModal />
-                                            <i className="fa-solid fa-user-ninja"  data-bs-toggle="modal" data-bs-target="#addTeacherModal"></i>
-                                            <AddTeacherModal/>
-                                        </div>
-                                    </td>
-                                    <td>Lorem.</td>
-                                    <td>Lorem, ipsum.@email.com</td>
-                                    <td>5   </td>
-                                    <td>0103166314</td>
-                                    <td>Lorem ipsum dolor sit.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn approved'>Approved</span></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td className='pending_icons'>Lorem, ipsum.
-                                        <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
-                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                                            <DeleteModal deleteData={{ type: "a school", content: "Lorem, ipsum." }} />
-                                            <i className="fa-solid fa-square-check me-2" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
-                                            <ApproveModal approveData={{ type: "a school", content: "Lorem, ipsum." }} />
-                                            <i className="fa-solid fa-square-xmark me-2" data-bs-toggle="modal" data-bs-target="#rejectModal"></i>
-                                            <RejectModal rejectData={{ type: "a school", content: "Lorem, ipsum." }} />
-                                        </div>
-                                    </td>
-                                    <td>Lorem.</td>
-                                    <td>Lorem, ipsum.@email.com</td>
-                                    <td>5   </td>
-                                    <td>0103166314</td>
-                                    <td>Lorem ipsum dolor sit.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn pending'>Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td className='pending_icons'>Lorem, ipsum.
-                                        <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
-                                            <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                                            <DeleteModal deleteData={{ type: "a school", content: "Lorem, ipsum." }} />
-                                            <i className="fa-solid fa-square-check me-2" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
-                                            <i className="fa-solid fa-square-xmark me-2" data-bs-toggle="modal" data-bs-target="#rejectModal"></i>
-                                            <RejectModal rejectData={{ type: "a school", content: "Lorem, ipsum." }} />
-                                        </div>
-                                    </td>
-                                    <td>Lorem.</td>
-                                    <td>Lorem, ipsum.@email.com</td>
-                                    <td>5   </td>
-                                    <td>0103166314</td>
-                                    <td>Lorem ipsum dolor sit.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn pending'>Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td className='rejected_icons'>Lorem, ipsum.
-                                        <div className='school__icons'>
-                                            <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                                            <EditModal editData={{ type: "school", content: ["School Name", "School Address", "Postal Code", "Province/State", "Phone Number", "Email", "Country", "Tuition Centre"] }} />
-                                            <i className="fa-solid fa-trash-arrow-up me-2" data-bs-toggle="modal" data-bs-target="#restoreModal"></i>
-                                            <RestoreModal restoreData={{ type: "a school", content: "Lorem, ipsum." }} />
+                                {
+                                    schoolsData && schoolsData.map((item, idx) => (
+                                        <tr key={idx}>
+                                            <td>{item.id}</td>
+                                            <td className='approved_icons'>{item.name}
+                                                <div className='school__icons'>
+                                                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#updateSchoolModal" onClick={() => handleUpdate(item)}></i>
+                                                    <UpdateSchoolModal deleteId={deleteId} getSchoolsData={getSchoolsData} updateData={updateData} />
+                                                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal" onClick={() => handleDelete(item.id)}></i>
+                                                    <DeleteModal id={deleteId} deleteData={{ type: "a school", content: "Lorem, ipsum.", deletePoint: `/api/schools/` }} fetchData={getSchoolsData} />
+                                                    <i className="fa-solid fa-user-plus me-2 " data-bs-toggle="modal" data-bs-target="#addOrgParticipant"></i>
+                                                    <AddParticipatnModal />
+                                                    <i className="fa-solid fa-user-ninja" data-bs-toggle="modal" data-bs-target="#addTeacherModal"></i>
+                                                    <AddTeacherModal />
+                                                </div>
+                                            </td>
+                                            <td>{item.country_id}</td>
+                                            <td>{item.email}</td>
+                                            <td></td>
+                                            <td>{item.phone}</td>
+                                            <td>{item.address}</td>
+                                            <td>{item.postal_code}</td>
+                                            <td>{item.province}</td>
+                                            <td>{item.created_by} at {item.created_at}</td>
+                                            <td>{item.approved_by} at {item.approved_at}</td>
+                                            <td></td>
+                                            <td>{item.updated_by} at {item.updated_at}</td>
+                                            <td>{item.state}</td>
+                                        </tr>
+                                    ))
+                                }
 
-                                        </div>
-                                    </td>
-                                    <td>Lorem.</td>
-                                    <td>Lorem, ipsum.@email.com</td>
-                                    <td>5   </td>
-                                    <td>0103166314</td>
-                                    <td>Lorem ipsum dolor sit.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td>Lorem, ipsum.</td>
-                                    <td className=''>kelly(2020/05/5 13:00)</td>
-                                    <td className=''><span className='status-btn rejected'>Deleted</span></td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>

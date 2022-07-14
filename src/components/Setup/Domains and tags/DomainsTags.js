@@ -1,6 +1,5 @@
 import React from 'react'
 import AddDomainModal from '../../Modals/add domain modal/AddDomainModal'
-import AddModal from '../../Modals/add modal/AddModal'
 import ApproveModal from '../../Modals/approvemodal/ApproveModal'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import EditModal from '../../Modals/edit modal/EditModal'

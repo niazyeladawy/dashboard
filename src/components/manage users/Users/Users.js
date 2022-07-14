@@ -8,7 +8,6 @@ import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
 import { Link } from "react-router-dom";
 
 import './user.css'
-import AddModal from '../../Modals/add modal/AddModal'
 
 
 const Users = () => {
@@ -34,7 +33,7 @@ const Users = () => {
       <div className='d-flex justify-content-between mt-2 align-items-center'>
         <div className='d-flex'>
           <button className='add-btn shadow-sm py-1 px-3' data-bs-toggle="modal" data-bs-target="#addModal"><i className='fas fa-plus'></i> Add New User</button>
-          <AddModal addData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
+          
           <button className='approve-btn shadow-sm py-1 px-3 ms-3'><i className="fa-solid fa-user-check"></i> Mass Enable User</button>
           <button className='approve-btn shadow-sm py-1 px-3 ms-3'><i className="fa-solid fa-user-large-slash"></i>Mass Disable User</button>
           <button className='delete-btn shadow-sm py-1 px-3 ms-3'><i className='fas fa-trash'></i> Mass Delete</button>
