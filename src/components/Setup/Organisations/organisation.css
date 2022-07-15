@@ -3,7 +3,7 @@
     position: relative;
     transition: all .5s;
 }
-.organization__icons i:first-of-type:hover::after{
+.organization__icons i.fa-pen-to-square:hover::after{
     position: absolute;
     content: "edit";
     bottom: -18px;

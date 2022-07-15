@@ -32,9 +32,9 @@ const AddOrgModal = ({ getOrganisationsData }) => {
     }
     const formSubmit = async (e) => {
         e.preventDefault();
-        const isValid = await schema.validate(addDataState).catch((error) => seterrorlist(error.errors))
         setLoading(true);
-
+        const isValid = await schema.validate(addDataState).catch((error) => seterrorlist(error.errors))
+        setLoading(false);
         if(isValid) {
             setLoading(true)
             seterrorlist(null);
@@ -58,7 +58,7 @@ const AddOrgModal = ({ getOrganisationsData }) => {
     }
 
     function handleCloseModal() {
-        document.getElementById("addOrgModal").classList.remove("show", "d-block");
+        document.getElementById("addOrgModal").classList.remove("show","d-block");
         document.querySelectorAll(".modal-backdrop").forEach(el => el.classList.remove("modal-backdrop"));
         document.querySelector("body").classList.remove("modal-open");
         document.querySelector("body").style = "";

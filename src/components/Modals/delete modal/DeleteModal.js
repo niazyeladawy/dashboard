@@ -25,8 +25,10 @@ const DeleteModal = ({deleteData,id,fetchData}) => {
             });
     }
 
+    
+
     function handleCloseModal() {
-        document.getElementById("deleteModal").classList.remove("show", "d-block");
+        document.getElementById("deleteModal").classList.remove("show","d-block");
         document.querySelectorAll(".modal-backdrop").forEach(el => el.classList.remove("modal-backdrop"));
         document.querySelector("body").classList.remove("modal-open");
         document.querySelector("body").style = "";

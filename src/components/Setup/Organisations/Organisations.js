@@ -27,8 +27,9 @@ const Organisations = () => {
         setdeleteId(id)
     }
 
-    const handleSomething = (item) => {
-        setupdateData({ name: item.name, email: item.email, address: item.address, postal_code: item.postal_code, phone: item.phone, country_id: item.country_id, is_tution_centre: item.is_tution_centre });
+    const handleUpdate = (item) => {
+        console.log(item);
+        setupdateData({ name: item.name, email: item.email, address: item.address, person_in_charge_name: item.person_in_charge_name, phone: item.phone, country_id: item.country_id, billing_address: item.billing_address,shipsping_address: item.shipping_address});
         setdeleteId(item.id)
     }
 
@@ -162,8 +163,8 @@ const Organisations = () => {
                                         <td>{item.id}</td>
                                         <td>{item.name}
                                             <div className='organization__icons'>
-                                                <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editOrgModal"></i>
-                                                <EditOrgModal />
+                                                <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editOrgModal" onClick={() => handleUpdate(item)}></i>
+                                                <EditOrgModal deleteId={deleteId} getOrganisationsData={getOrganisationsData} updateData={updateData} />
                                                 <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal" onClick={() => handleDelete(item.id)}></i>
                                                 <DeleteModal id={deleteId} deleteData={{ type: "an organisation", content: "Lorem, ipsum.", deletePoint: `/api/organizations/` }} fetchData={getOrganisationsData} />
                                                 <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
