@@ -444,9 +444,6 @@ const AddOrgModal = ({ getOrganisationsData }) => {
                     </div>
                 </div>
             </div>
-           
-            
-
         </>
 
     )

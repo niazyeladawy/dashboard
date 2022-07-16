@@ -1,16 +1,51 @@
-import React from 'react'
-import ApproveModal from '../../Modals/approvemodal/ApproveModal'
+import React, { useEffect, useState } from 'react'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
-import DisableModal from '../../Modals/disable modal/DisableModal'
-import EditModal from '../../Modals/edit modal/EditModal'
 import FilterModal from '../../Modals/filter modal/FilterModal'
 import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
-import { Link } from "react-router-dom";
-
+import axios from './../../axios/axios'
 import './user.css'
+import AddUserModal from '../../Modals/add user modal/AddUserModal'
+import UpdateUserModal from '../../Modals/update user modal/UpdateUserModal'
 
 
 const Users = () => {
+  const [deleteId, setdeleteId] = useState(0);
+  const [updateData, setupdateData] = useState({});
+  const [userName, setuserName] = useState(null)
+  const [usersData, setusersData] = useState([]);
+
+  const getUsersData = async () => {
+    let { data } = await axios.get("/api/users");
+    setusersData(data)
+  }
+
+  useEffect(() => {
+    getUsersData();
+
+  }, [])
+
+  const handleDelete = (id,name) => {
+    setdeleteId(id)
+    setuserName(name)
+  }
+
+  const handleUpdate = (item) => {
+   
+    setupdateData({ name: item.name, email: item.email, username: item.username, password: item.password, phone: item.phone, country_id: item.country_id, role_id: item.role_id });
+    setdeleteId(item.id)
+  }
+
+  const getRole = (role_id)=>{
+    return role_id === 1 ? "admin" : "user" ;
+  }
+
+  const getCoutry = (country_id)=>{
+    if(country_id === 1 || country_id ===2 ){
+      return "Egypt"
+    }
+  }
+
+
   return (
     <div className='flex-grow-1 bg-main-content py-5 px-3 overflow-hidden'>
 
@@ -32,8 +67,8 @@ const Users = () => {
       </div>
       <div className='d-flex justify-content-between mt-2 align-items-center'>
         <div className='d-flex'>
-          <button className='add-btn shadow-sm py-1 px-3' data-bs-toggle="modal" data-bs-target="#addModal"><i className='fas fa-plus'></i> Add New User</button>
-          
+          <button className='add-btn shadow-sm py-1 px-3' data-bs-toggle="modal" data-bs-target="#addUserModal"><i className='fas fa-plus'></i> Add New User</button>
+          <AddUserModal getUsersData={getUsersData} />
           <button className='approve-btn shadow-sm py-1 px-3 ms-3'><i className="fa-solid fa-user-check"></i> Mass Enable User</button>
           <button className='approve-btn shadow-sm py-1 px-3 ms-3'><i className="fa-solid fa-user-large-slash"></i>Mass Disable User</button>
           <button className='delete-btn shadow-sm py-1 px-3 ms-3'><i className='fas fa-trash'></i> Mass Delete</button>
@@ -61,126 +96,38 @@ const Users = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Lorem, ipsum.
-                  <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
-                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <i className="fa-solid fa-user-check me-2 enabled-icon" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
-                    <ApproveModal approveData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
-                      <i className="fa-solid fa-eye me-2"></i>
-                    </Link>
-                  </div>
-                </td>
-                <td>Lorem.</td>
-                <td>Egypt</td>
-                <td>Yes</td>
-                <td>Lorem, ipsum.@email.com</td>
-                <td>Niazy(15/6/2022 14:00)   </td>
-                <td>Niazy(15/6/2022 14:00) </td>
-                <td>15/6/2022 14:00</td>
-                <td><span className="status-btn disabled">Disabled</span></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Lorem, ipsum.
-                  <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
-                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <i className="fa-solid fa-user-check me-2 enabled-icon" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
-                    <ApproveModal approveData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
-                      <i className="fa-solid fa-eye me-2"></i>
-                    </Link>
-                  </div>
-                </td>
-                <td>Lorem.</td>
-                <td>Egypt</td>
-                <td>Yes</td>
-                <td>Lorem, ipsum.@email.com</td>
-                <td>Niazy(15/6/2022 14:00)   </td>
-                <td>Niazy(15/6/2022 14:00) </td>
-                <td>15/6/2022 14:00</td>
-                <td><span className="status-btn disabled">Disabled</span></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Lorem, ipsum.
-                  <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
-                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <i className="fa-solid fa-user-check me-2 enabled-icon" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
-                    <ApproveModal approveData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
-                      <i className="fa-solid fa-eye me-2"></i>
-                    </Link>
-                  </div>
-                </td>
-                <td>Lorem.</td>
-                <td>Egypt</td>
-                <td>Yes</td>
-                <td>Lorem, ipsum.@email.com</td>
-                <td>Niazy(15/6/2022 14:00)   </td>
-                <td>Niazy(15/6/2022 14:00) </td>
-                <td>15/6/2022 14:00</td>
-                <td><span className="status-btn disabled">Disabled</span></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Lorem, ipsum.
-                  <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
-                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <i className="fa-solid fa-user-large-slash me-2 disabled-icon" data-bs-toggle="modal" data-bs-target="#disableModal"></i>
-                    <DisableModal disableData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
-                      <i className="fa-solid fa-eye me-2"></i>
-                    </Link>
-                  </div>
-                </td>
-                <td>Lorem.</td>
-                <td>Egypt</td>
-                <td>Yes</td>
-                <td>Lorem, ipsum.@email.com</td>
-                <td>Niazy(15/6/2022 14:00)   </td>
-                <td>Niazy(15/6/2022 14:00) </td>
-                <td>15/6/2022 14:00</td>
-                <td><span className="status-btn enabled-btn">Enabled</span></td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Lorem, ipsum.
-                  <div className='users__icons'>
-                    <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
-                    <EditModal editData={{ type: "user", content: ["Full Name", "Role", "Username", "Email", "Password", "Confirm Password"] }} />
-                    <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                    <DeleteModal deleteData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <i className="fa-solid fa-user-large-slash me-2 disabled-icon" data-bs-toggle="modal" data-bs-target="#disableModal"></i>
-                    <DisableModal disableData={{ type: "a user", content: "Lorem, ipsum." }} />
-                    <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
-                      <i className="fa-solid fa-eye me-2"></i>
-                    </Link>
-                  </div>
-                </td>
-                <td>Lorem.</td>
-                <td>Egypt</td>
-                <td>Yes</td>
-                <td>Lorem, ipsum.@email.com</td>
-                <td>Niazy(15/6/2022 14:00)   </td>
-                <td>Niazy(15/6/2022 14:00) </td>
-                <td>15/6/2022 14:00</td>
-                <td><span className="status-btn enabled-btn">Enabled</span></td>
-              </tr>
+              {
+                usersData && usersData.map((item, idx) => (
+                  <tr key={idx}>
+                    <td>{item.id}</td>
+                    <td>{item.name}
+                      <div className='users__icons'>
+                        <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#updateUserModal" onClick={() => handleUpdate(item)}></i>
+                        <UpdateUserModal  deleteId={deleteId} getUsersData={getUsersData} updateData={updateData} />
+                        <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal" onClick={()=> handleDelete(item.id,item.name)}></i>
+                        <DeleteModal id={deleteId} deleteData={{ type: "a user", content: userName, deletePoint: `/api/users/` }} fetchData={getUsersData} />
+                        {/* <i className="fa-solid fa-user-check me-2 enabled-icon" data-bs-toggle="modal" data-bs-target="#approveModal"></i>
+                        <ApproveModal approveData={{ type: "a user", content: "Lorem, ipsum." }} />
+                        <Link className='text-black' to={"/dashboard/manage-users/user-permissions"}>
+                          <i className="fa-solid fa-eye me-2"></i>
+                        </Link> */}
+                      </div>
+                    </td>
+                    <td>{getRole(item.role_id)}</td>
+                    <td>{getCoutry(item.country_id)}</td>
+                    <td>{item.permission_by_role}</td>
+                    <td>{item.email}</td>
+                    <td>{item.created_by} at {item.created_at}</td>
+                    <td>{item.updated_by} at {item.updated_at}</td>
+                    <td>{item.login}</td>
+                    <td>{item.status}</td>
+                    {/* <td><span className="status-btn disabled">Disabled</span></td> */}
+                  </tr>
+                ))
+              }
+
+
+
             </tbody>
           </table>
         </div>

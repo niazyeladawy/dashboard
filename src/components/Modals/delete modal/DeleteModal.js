@@ -9,16 +9,12 @@ const DeleteModal = ({deleteData,id,fetchData}) => {
     const handleDelete =async ()=>{
         setLoading(true);
         axios.delete(`${deleteData.deletePoint}${id}`)
-            .then(({data}) => {
-                if (data) {
-                    
+            .then(() => {
+                
                     setLoading(false);
                     handleCloseModal();
                     fetchData();
-                }
-                else {
-                    setLoading(false);
-                }
+                
             })
             .catch((error) => {
                 setLoading(false);
